@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; html</title>
+	<atom:link href="http://jorgepedret.com/topics/web-development/html-web-development/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>HTML5 &#8211; What you really need to know</title>
+		<link>http://jorgepedret.com/web-development/html5-what-you-really-need-to-know/</link>
+		<comments>http://jorgepedret.com/web-development/html5-what-you-really-need-to-know/#comments</comments>
+		<pubDate>Sun, 18 Apr 2010 23:53:09 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[html]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[html5]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=125</guid>
+		<description><![CDATA[Quick reference for designers &#038; developers who just want the facts. 
+
+An update and comparison between the html we've been working on for years and the new html5.
+
+What's new, What was removed, What was changed and what's the current browser support.]]></description>
+			<content:encoded><![CDATA[<p>This is a quick reference for those designers &amp; developers who just want the facts.</p>
+<h3>What&#8217;s new?</h3>
+<p><strong>DOCTYPE</strong></p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;!-- Before --&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;!-- Now --&gt;
+&lt;!DOCTYPE html&gt;
+</pre>
+<p>Most browsers will parse documents with that doctype as html5. That simple <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+<p><strong>CHARSET</strong></p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;!-- Before --&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;!-- Now --&gt;
+&lt;meta charset=utf-8 /&gt;
+</pre>
+<h3>What was removed?</h3>
+<p>This tags are no longer valid in html5</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;basefont&gt;
+&lt;big&gt;
+&lt;center&gt;
+&lt;font&gt;
+&lt;s&gt;
+&lt;strike&gt;
+&lt;tt&gt;
+&lt;u&gt;
+</pre>
+<p>Frames were removed as well.</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;frame /&gt;
+&lt;frameset&gt;
+&lt;noframes &gt;
+</pre>
+<p>Obsolete tags were taken out of html5 as well:</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;acronym&gt;
+&lt;!-- Use abbr instead --&gt;
+&lt;applet&gt;
+&lt;!-- Obsoleted in favor of object --&gt;
+&lt;isindex&gt;
+&lt;!-- Replaced by usage of form controls --&gt;
+&lt;dir&gt;
+&lt;!-- Obsoleted in favor of ul --&gt;
+</pre>
+<p>Tag&#8217;s attributes referring to visual characteristics were removed as well. Just to mention some:</p>
+<pre class="brush: xml; title: ; notranslate">align, background, bgcolor, border, clear, height</pre>
+<h3>What changed?</h3>
+<pre class="brush: xml; title: ; notranslate">
+&lt;a&gt;
+&lt;!-- Now it can contain block elements. Hurray! --&gt;
+&lt;b&gt;
+&lt;!-- Now represents text whose typical typographic presentation is emboldened --&gt;
+&lt;hr /&gt;
+&lt;!-- Now reprensents a thematic break in paragraph-level --&gt;
+&lt;i&gt;
+&lt;!-- Now represents text in an alternate voice or mood --&gt;
+&lt;menu&gt;
+&lt;!-- Has been redefined to be usefull for toolbars and context menues --&gt;
+&lt;small&gt;
+&lt;!-- Is now used to represent small print in documents, generally for legal purposes --&gt;
+&lt;b&gt;
+&lt;!-- Now represents importance instead of strong emphasis --&gt;
+</pre>
+<h3>New stuff, the exiting part!</h3>
+<p>A bunch of <strong>new tags</strong> have been created to satisfy the common needs that HTML coders find everyday.</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;section&gt;
+&lt;!-- Generic document or application section --&gt;
+&lt;article&gt;
+&lt;!-- INDEPENDENT piece of content of a document. E.g: Blog entry, newspaper article --&gt;
+&lt;aside&gt;
+&lt;!-- Content slightly related to the rest of the page. *cough* side bars *cough* --&gt;
+&lt;hgroup&gt;
+&lt;!-- Header of a section. E.g: To include title and subtitle, or company name and slogan type of thing --&gt;
+&lt;header&gt;
+&lt;!-- Group of Introductory or navigational aids. Doesn't necessarily needs to be at the top of the document, it can be the header of a section of the page --&gt;
+&lt;footer&gt;
+&lt;!-- Footer for a section. Can contain information about the author, copyright, etc. --&gt;
+&lt;nav&gt;
+&lt;!-- Section of document intended for navigation. --&gt;
+&lt;figure&gt;
+&lt;!-- Associate a caption with some embedded content, such as graphic or video. --&gt;
+&lt;figcaption&gt;
+&lt;!-- Provides caption for the previous tag's embedded content --&gt;
+&lt;video&gt;
+&lt;!-- Video and audio multimedia content. Very exciting tag <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' />  --&gt;
+&lt;mark&gt;
+&lt;!-- Run of marked text. E.g: Can be used for marking keywords of a search in a long text --&gt;
+&lt;progress&gt;
+&lt;!-- Represents a completion of a task. E.g: Downloading, performing series of expensive operations --&gt;
+&lt;meter&gt;
+&lt;!-- Represents a measurement, such as disk usage. --&gt;
+&lt;time&gt;
+&lt;!-- Represents a date and/or time. Very exciting tag <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' />  --&gt;
+&lt;canvas&gt;
+&lt;!-- Rendering dynamic bitmap graphics on the fly. Very exciting tag --&gt;
+&lt;command&gt;
+&lt;!-- Represents a command the user can invoke --&gt;
+&lt;details&gt;
+&lt;!-- Additional information or controls which user can obtain on demand --&gt;
+&lt;datalist&gt;
+&lt;!-- Used for creating a list of options for the new 'select' tag. --&gt;
+&lt;keygen&gt;
+&lt;!-- Control for key pair generation. --&gt;
+&lt;output&gt;
+&lt;!-- Represents some type of output. E.g: Calculation result --&gt;
+</pre>
+<p><strong>Input tag</strong>&#8216;s type attribute now has the following values:</p>
+<ul>
+<li>tel</li>
+<li>search</li>
+<li>url</li>
+<li>email</li>
+<li>datetime</li>
+<li>date</li>
+<li>month</li>
+<li>week</li>
+<li>time</li>
+<li>datetime-local</li>
+<li>number</li>
+<li>range</li>
+<li>color</li>
+</ul>
+<p>Depending on the device or browser used, this can prompt change the way to input the value. For example, if browsing from an iPhone, the datetime value promts the native way for the iPhone to choose a date+time.</p>
+<p>The type attribute can also be used for automatic browser native validation purposes.</p>
+<p>For more details on form changes, take a look at <a href="http://diveintohtml5.org/forms.html">http://diveintohtml5.org/forms.html</a></p>
+<p>Visit: <a href="http://www.w3.org/TR/html5-diff/#new-attributes">http://www.w3.org/TR/html5-diff/#new-attributes</a> for more <strong>new attributes</strong> in html5 that you need to know about.</p>
+<h3>New html5 API&#8217;s</h3>
+<p>Other than tags, html5 implements a bunch of new API&#8217;s (think of it like javascript libraries) that will help you develop better applications in a faster way.</p>
+<ul>
+<li><strong>Video &amp; Audio</strong>: API for playing of video and audio; it can be used with the new video and audio elements.</li>
+<li><strong>Offline Apps</strong>: An API that enables offline Web applications.</li>
+<li><strong>Editable Content</strong>: API for editing inline content; use it with the new global contenteditable attribute.</li>
+<li><strong>Drag &amp; Drop</strong>: API for drag &amp; drop elements; use in combination with a draggable attribute.</li>
+<li><strong>History</strong>: API that exposes the history and allows pages to add to it to prevent breaking the back button.</li>
+<li><strong>Geolocation</strong>: API that provides scripted access to geographical location of the device that&#8217;s browsing the site</li>
+<li><strong>Local Storage</strong>: API for persistent data storage of key-value pair data in Web clients <em>(how exciting is that!?)</em></li>
+</ul>
+<h3>Examples:</h3>
+<p>Check out html5 examples here <a href="http://html5demos.com/">http://html5demos.com/</a> they have everything and more of what I&#8217;ve said here and it&#8217;ll also tell you the current browser support.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/html5-what-you-really-need-to-know/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

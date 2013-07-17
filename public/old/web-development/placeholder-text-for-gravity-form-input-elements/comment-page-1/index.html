@@ -1,0 +1,1281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+
+<title>Placeholder text for Gravity Form input elements | Jorge Pedret</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../../wp-content/themes/elefolio/style.css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/JorgePedret" />
+<link rel="pingback" href="../../../xmlrpc.php" />
+      
+<link rel="alternate" type="application/rss+xml" title="Jorge Pedret &raquo; Placeholder text for Gravity Form input elements Comments Feed" href="../feed/index.html" />
+<link rel='stylesheet' id='sharedaddy-css'  href='../../../wp-content/plugins/jetpack/modules/sharedaddy/sharing.css@ver=3.4.1.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://jorgepedret.com/wp-includes/js/comment-reply.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://jorgepedret.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='../../../wp-content/themes/elefolio/includes/js/superfish.js@ver=3.4.1'></script>
+<script type='text/javascript' src='../../../wp-content/themes/elefolio/includes/js/general.js@ver=3.4.1'></script>
+<script type='text/javascript' src='../../../wp-content/themes/elefolio/includes/tumblog/swfobject.js@ver=3.4.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc.php@rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://jorgepedret.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Get pages by template name in WordPress' href='../../get-pages-by-template-name-in-wordpress/index.html' />
+<link rel='next' title='Post of the day: A mangiare! (Illustration)' href='../../../design-2/post-of-the-day-a-mangiare-illustration/index.html' />
+<meta name="generator" content="WordPress 3.4.1" />
+<link rel='shortlink' href='http://wp.me/p1uIKC-8F' />
+
+<!-- All in One SEO Pack 1.6.14.5 by Michael Torbert of Semper Fi Web Design[207,279] -->
+<meta name="description" content="Surprisingly GravityForms hasn't implemented the placeholder feature yet. I know they have plans on doing so soon, but we need a solution while we wait for that. I came up with this quick solution using only GF filters and jQuery. Check it out!" />
+<meta name="keywords" content="code,development,forms,gravity forms,placeholder,plugin,snippet,text,tricks,wordpress,wp,web development" />
+<link rel="canonical" href="../index.html" />
+<!-- /all in one seo pack -->
+<style type="text/css" media="screen">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+	width: 95%;
+}
+
+.contactleft {
+	width: 25%;
+	white-space: pre;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+<!-- Theme version -->
+<meta name="generator" content="Elefolio 1.4.1" />
+<meta name="generator" content="WooFramework 5.3.12" />
+	
+<!--[if IE 6]>
+<script type="text/javascript" src="http://jorgepedret.com/wp-content/themes/elefolio/includes/js/pngfix.js"></script>
+<script type="text/javascript" src="http://jorgepedret.com/wp-content/themes/elefolio/includes/js/menu.js"></script>
+<![endif]-->	
+<!-- Wordpres Counter -->
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3" />
+
+<!-- Google Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet" type="text/css" />
+
+<!-- Woo Custom Typography -->
+<style type="text/css">
+#logo .site-title a {font:bold 40px/1em Bowlby One SC;color:#222222;}
+#logo .site-description {font:normal 16px/1em "Helvetica Neue", Helvetica, sans-serif;color:#999999;}
+</style>
+
+<!-- Alt Stylesheet -->
+<link href="../../../wp-content/themes/elefolio/styles/default.css" rel="stylesheet" type="text/css" />
+<!-- Options Panel Custom CSS -->
+<style type="text/css">
+#logo img { display:none; } .site-title { display:block!important; }
+.site-description { display:block!important; }
+.entry ol li{
+margin-bottom: 10px;
+}
+.page-template-template-blog-php .post .title{
+clear:both;
+}
+.entry:before, .entry:after { content: ""; display: table; }
+.entry:after { clear: both }
+.entry { *zoom: 1 }
+</style>
+
+
+<!-- Woo Shortcodes CSS -->
+<link href="../../../wp-content/themes/elefolio/functions/css/shortcodes.css" rel="stylesheet" type="text/css" />
+
+<!-- Custom Stylesheet -->
+<link href="../../../wp-content/themes/elefolio/custom.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="single single-post postid-537 single-format-standard unknown">
+
+<div id="wrapper">
+
+	<div id="header-wrap" class="col-full">
+
+		<div id="header">
+		
+    		<div id="logo" class="fl">
+    			
+				 
+		        
+		        		            <span class="site-title"><a href="../../../index.html">Jorge Pedret</a></span>
+		        		            <span class="site-description">Freelance Web Developer + Front End Designer</span>
+    	    	
+    	    </div><!-- /#logo -->
+		
+			<div id="top-right" class="fr"> 
+
+				<div class="nav">
+				<ul id="menu-main-menu" class="menu"><li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-260"><a href="../../../index.html">Home</a></li>
+<li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="../../../portfolio/index.html">Portfolio</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="../../../about-me/index.html">About Me</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="../../../the-blog/index.html">Blog</a></li>
+<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="../../../contact-me/index.html">Contact Me</a></li>
+</ul>		      	</div><!-- /.nav -->
+    	    
+    	    </div><!-- /#top-right -->  
+    	    <div class="fix"></div>  
+    	    	
+    	</div><!-- /#header -->
+    	
+    </div><!-- /#header-wrap -->
+    
+	    
+        
+	           
+    <div id="content" class="col-full">
+
+		<div id="main" class="fl"> 
+		           
+		           
+                                    
+					   			
+	   			
+	<div class="post">
+	
+        <div class="posttype">
+        	<a href="../../../topics/web-development/index.html" title=""><img src="../../../wp-content/themes/elefolio/images/ico-text.png" alt="" /></a>
+        </div><!-- /.posttype -->
+	    
+	    	    <h1 class="title"><a href="../index.html" rel="bookmark" title="Placeholder text for Gravity Form input elements">Placeholder text for Gravity Form input elements</a></h1>
+	    	    
+	    <p class="post-meta">
+    <span class="post-author"><span class="small">by</span> <a href="../../../author/admin/index.html" title="Posts by Jorge Pedret" rel="author">Jorge Pedret</a></span>
+    <span class="post-date"><span class="small">on</span> June 22, 2011</span>
+    <span class="post-category"><span class="small">in</span> <a href="../../../topics/web-development/index.html" title="View all posts in Web Development" rel="category tag">Web Development</a></span>
+    </p>
+	    
+	    <div class="entry">
+			<p>Surprisingly GravityForms hasn&#8217;t implemented the placeholder feature yet. I know they have plans on doing so soon, but we need a solution while we wait for that.</p>
+<p>I came up with this quick solution using only GF filters and jQuery.</p>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h2>What the editor will look like</h2>
+<p><img class="size-full wp-image-538" title="form-editor-screenshot" src="../../../wp-content/uploads/2011/06/form-editor-screenshot.png" alt="" width="528" height="718" /></p>
+<h2>What the form will look like</h2>
+<p><img class="alignnone size-full wp-image-539" title="form-preview-screenshot" src="../../../wp-content/uploads/2011/06/form-preview-screenshot.png" alt="" width="613" height="350" /></p>
+<h2>The code</h2>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h3>Add the placeholder option to the editor</h3>
+<pre class="brush: php; title: ; notranslate" title="">
+/* In the functions.php file */
+/* Add a custom field to the field editor (See editor screenshot) */
+add_action(&quot;gform_field_standard_settings&quot;, &quot;my_standard_settings&quot;, 10, 2);
+function my_standard_settings($position, $form_id){
+	// Create settings on position 25 (right after Field Label)
+	if($position == 25){
+		?&gt;
+		&lt;li class=&quot;admin_label_setting field_setting&quot; style=&quot;display: list-item; &quot;&gt;
+			&lt;label for=&quot;field_placeholder&quot;&gt;Placeholder Text
+				&lt;!-- Tooltip to help users understand what this field does --&gt;
+				&lt;a href=&quot;javascript:void(0);&quot; class=&quot;tooltip tooltip_form_field_placeholder&quot; tooltip=&quot;&amp;lt;h6&amp;gt;Placeholder&amp;lt;/h6&amp;gt;Enter the placeholder/default text for this field.&quot;&gt;(?)&lt;/a&gt;
+			&lt;/label&gt;
+			&lt;input type=&quot;text&quot; id=&quot;field_placeholder&quot; class=&quot;fieldwidth-3&quot; size=&quot;35&quot; onkeyup=&quot;SetFieldProperty('placeholder', this.value);&quot;&gt;
+		&lt;/li&gt;
+		&lt;?php
+	}
+}
+
+/* Now we execute some javascript technicalitites for the field to load correctly */
+add_action(&quot;gform_editor_js&quot;, &quot;my_gform_editor_js&quot;);
+function my_gform_editor_js(){
+	?&gt;
+	&lt;script&gt;
+		//binding to the load field settings event to initialize the checkbox
+		jQuery(document).bind(&quot;gform_load_field_settings&quot;, function(event, field, form){
+			jQuery(&quot;#field_placeholder&quot;).val(field[&quot;placeholder&quot;]);
+		});
+	&lt;/script&gt;
+	&lt;?php
+}
+</pre>
+<h3>Use jQuery to inject the placeholder value to the fields</h3>
+<pre class="brush: php; title: ; notranslate" title="">
+/* In the functions.php file */
+/* We use jQuery to read the placeholder value and inject it to its field */
+add_action('gform_enqueue_scripts',&quot;my_gform_enqueue_scripts&quot;, 10, 2);
+function my_gform_enqueue_scripts($form, $is_ajax=false){
+	?&gt;
+	&lt;script&gt;
+	jQuery(function(){
+		&lt;?php
+		/* Go through each one of the form fields */
+		foreach($form['fields'] as $i=&gt;$field){
+			/* Check if the field has an assigned placeholder */
+			if(isset($field['placeholder']) &amp;&amp; !empty($field['placeholder'])){
+				/* If a placeholder text exists, inject it as a new property to the field using jQuery */
+				?&gt;
+				jQuery('#input_&lt;?php echo $form['id']?&gt;_&lt;?php echo $field['id']?&gt;').attr('placeholder','&lt;?php echo $field['placeholder']?&gt;');
+				&lt;?php
+			}
+		}
+		?&gt;
+	});
+	&lt;/script&gt;
+	&lt;?php
+}
+</pre>
+<p>That&#8217;s it! take it for a spin and let me know how it goes.</p>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h2>Issues</h2>
+<p>Right now it only works with single lines, textareas and the other simple fields. But that&#8217;s usually the only places where you will ever need them.</p>
+<h2>Internet Explorer support update</h2>
+<p><a href="http://askwpgirl.com/">Angela Bowma</a> wrote a post with a <a href="http://askwpgirl.com/gravity-forms-placeholder-text-works-with-ie/">solution that works in Internet Explorer</a> or browsers that don&#8217;t support the placeholder property.</p>
+<div class="snap_nopreview sharing robots-nocontent"><ul><li class="sharing_label">Share this:</li><li class="share-email share-regular"><a rel="nofollow" class="share-email share-icon" href="../index.html@share=email.html" title="Click to email this to a friend">Email</a></li><li class="share-facebook share-regular"><a rel="nofollow" class="share-facebook share-icon" href="../index.html@share=facebook.html" title="Share on Facebook">Facebook</a></li><li class="share-twitter share-regular"><div class="twitter_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fjorgepedret.com%2Fweb-development%2Fplaceholder-text-for-gravity-form-input-elements%2F&amp;counturl=http%3A%2F%2Fjorgepedret.com%2Fweb-development%2Fplaceholder-text-for-gravity-form-input-elements%2F&amp;count=horizontal&amp;text=Placeholder%20text%20for%20Gravity%20Form%20input%20elements: " style="width:97px; height:20px;"></iframe></div></li><li class="share-end"></li></ul><div class="sharing-clear"></div></div>		</div>
+	         
+	    <div class="post-more">      
+	    		<span class="comments"><a href="../index.html#comments" title="Comment on Placeholder text for Gravity Form input elements">17 Comments</a></span>
+	    		<span class="shorturl"><a href="http://bit.ly/kfIApj" title="Short URL for Placeholder text for Gravity Form input elements">Short URL</a></span>				<span class="tags"><a href="../../../tag/code/index.html" rel="tag">code</a>, <a href="../../../tag/development/index.html" rel="tag">development</a>, <a href="../../../tag/forms/index.html" rel="tag">forms</a>, <a href="../../../tag/gravity-forms/index.html" rel="tag">gravity forms</a>, <a href="../../../tag/placeholder/index.html" rel="tag">placeholder</a>, <a href="../../../tag/plugin/index.html" rel="tag">plugin</a>, <a href="../../../tag/snippet/index.html" rel="tag">snippet</a>, <a href="../../../tag/text/index.html" rel="tag">text</a>, <a href="../../../tag/tricks/index.html" rel="tag">tricks</a>, <a href="../../../tag/wordpress/index.html" rel="tag">Wordpress</a>, <a href="../../../tag/wp/index.html" rel="tag">wp</a></span>	    </div>   
+	                         
+	</div><!-- /.post -->
+	
+	                
+				
+    
+
+<!-- You can start editing here. -->
+
+<div id="comments">
+
+
+	
+		<h3>17 Responses to &#8220;Placeholder text for Gravity Form input elements&#8221;</h3>
+
+		<ol class="commentlist">
+	
+				                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-17289"></a>
+	      	
+	      	<div id="li-comment-17289" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/a1c1225be8d547f7eee7fe94e8a3f7ac?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name">Matth</span>           
+	                <span class="date">August 3, 2011 at 4:43 pm</span>
+	                <span class="perma"><a href="index.html#comment-17289" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-17289">
+				
+				<p>Jorge, you are a genius!</p>
+<p>Your solution is brilliant. You just saved me a LOT of time. Thank you,  Matth</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-17290"></a>
+	      	
+	      	<div id="li-comment-17290" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='../../../index.html' rel='external nofollow' class='url url'>Jorge Pedret</a></span>           
+	                <span class="date">August 3, 2011 at 4:49 pm</span>
+	                <span class="perma"><a href="index.html#comment-17290" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-17290">
+				
+				<p>@Matth Thanks for your comments <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' />  Happy to see that it&#8217;s helping somebody!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-17676"></a>
+	      	
+	      	<div id="li-comment-17676" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/af9a9c081c9f1292e51ea351361b3f27?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://www.nibydesigngroup.com' rel='external nofollow' class='url url'>Nick Hoover</a></span>           
+	                <span class="date">August 8, 2011 at 11:22 pm</span>
+	                <span class="perma"><a href="index.html#comment-17676" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-17676">
+				
+				<p>Thanks Jorge!! Just what I was looking for. I can&#8217;t believe Gravity Forms doesn&#8217;t have this yet.</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-17679"></a>
+	      	
+	      	<div id="li-comment-17679" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='../../../index.html' rel='external nofollow' class='url url'>Jorge Pedret</a></span>           
+	                <span class="date">August 8, 2011 at 11:30 pm</span>
+	                <span class="perma"><a href="index.html#comment-17679" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-17679">
+				
+				<p>@Nick I&#8217;m happy it helped you! I&#8217;m sure they have it in mind for the next updates <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> . Cheers!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-19724"></a>
+	      	
+	      	<div id="li-comment-19724" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/5597766e58aea8d7149ac82cc725f404?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://1981.ca' rel='external nofollow' class='url url'>Darrell</a></span>           
+	                <span class="date">September 2, 2011 at 12:41 am</span>
+	                <span class="perma"><a href="index.html#comment-19724" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-19724">
+				
+				<p>Seems to work well, although when a required field is blank, and you submit the form, the placeholder text disappears&#8230;  Which is a bit of an issue if you are using the placeholder text instead of field labels.</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-19728"></a>
+	      	
+	      	<div id="li-comment-19728" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='../../../index.html' rel='external nofollow' class='url url'>Jorge Pedret</a></span>           
+	                <span class="date">September 2, 2011 at 3:38 am</span>
+	                <span class="perma"><a href="index.html#comment-19728" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-19728">
+				
+				<p>Hey Darrell, I&#8217;m not sure why this is happening. If you send me the export file for the form that you&#8217;re working on I could take a look at it.</p>
+<p>Or if you solved it already, you&#8217;re welcome to post the code here for everybody to see it <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+<p>Cheers!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-25568"></a>
+	      	
+	      	<div id="li-comment-25568" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/b94fa05e84b3cbd8743438f6f2c10b6e?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name">Chris</span>           
+	                <span class="date">December 6, 2011 at 1:28 pm</span>
+	                <span class="perma"><a href="index.html#comment-25568" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-25568">
+				
+				<p>Hello! I&#8217;m trying to implement your code — it&#8217;s loaded into my functions.php file, and everything seems to fire, but I&#8217;m not getting any of the placeholders in my form. I looked at the post-Jquery input fields, and one looks like this, as I would have expected it to be injected into the value: </p>
+<p>The form is located on a test server at <a href="http://pridehouston.cccomm.us/contact" rel="nofollow">http://pridehouston.cccomm.us/contact</a></p>
+<p>If you could provide any assistance, I would appreciate it!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-25981"></a>
+	      	
+	      	<div id="li-comment-25981" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='../../../index.html' rel='external nofollow' class='url url'>Jorge Pedret</a></span>           
+	                <span class="date">December 12, 2011 at 5:56 pm</span>
+	                <span class="perma"><a href="index.html#comment-25981" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-25981">
+				
+				<p>@Chris, I went to your testing site and there seem to be some javascript errors. My solution uses javascript to inject the placeholder properties to the form fields, so any javascript error would break the solution from working.</p>
+<p>Fix those javascript errors and it might make the placeholders work properly.</p>
+<p>Let me know how it goes!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-26551"></a>
+	      	
+	      	<div id="li-comment-26551" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/9cd5983cb0645f75374798463cfddc3d?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://chrisburbridge.com' rel='external nofollow' class='url url'>Chris Burbridge</a></span>           
+	                <span class="date">December 20, 2011 at 1:27 am</span>
+	                <span class="perma"><a href="index.html#comment-26551" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-26551">
+				
+				<p>This is tremENdous!!! Thanks! You might have saved me hours!!</p>
+<p>!!!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-28721"></a>
+	      	
+	      	<div id="li-comment-28721" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/f70e3ba1b3ab21469a2a0597b92e971e?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://askwpgirl.com' rel='external nofollow' class='url url'>Angela Bowma</a></span>           
+	                <span class="date">January 21, 2012 at 4:07 am</span>
+	                <span class="perma"><a href="index.html#comment-28721" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-28721">
+				
+				<p>Nice for you to repost this solution, however, it doesn&#8217;t appear to work in IE 8? There is the placeholder.js that does work at <a href="https://github.com/Jayphen/placeholder" rel="nofollow">https://github.com/Jayphen/placeholder</a> though I don&#8217;t know how to incorporate with this above function in the functions.php file. Any ideas how to add the placholder.js to this awesome function for gravity forms to get it to work on IE 8? Thanks!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1">
+	    
+	    	<a name="comment-28990"></a>
+	      	
+	      	<div id="li-comment-28990" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='../../../index.html' rel='external nofollow' class='url url'>Jorge Pedret</a></span>           
+	                <span class="date">January 25, 2012 at 4:35 pm</span>
+	                <span class="perma"><a href="index.html#comment-28990" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-28990">
+				
+				<p>Hi Angela, thanks for your question! I&#8217;m taking advantage of the placeholder property used only in modern browsers. The library that you posted would work perfectly in this case. Just make sure Jayphen&#8217;s library is being included after my code.</p>
+<p>I just saw that you posted a solution in your blog, I&#8217;m updating this post with a link to your post for people with the same question. <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-29964"></a>
+	      	
+	      	<div id="li-comment-29964" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/f754c7da2e0d6c91829abd08b0a4cc88?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://youweyoucoding.com' rel='external nofollow' class='url url'>Erik Gyepes</a></span>           
+	                <span class="date">February 9, 2012 at 2:41 pm</span>
+	                <span class="perma"><a href="index.html#comment-29964" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-29964">
+				
+				<p>Hi Joe,</p>
+<p>Great snippet, you should consider to submit it at <a href="http://wp-snippets.com" rel="nofollow">http://wp-snippets.com</a>. Anyway I had a small problem when I load the jQuery in the footer instead of header. Then it does not work, so I had to switch that the head instead as I cannot figure out how to load gravity forms scripts in footer.<br />
+Anyway good job, keep it on and thanks! <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-30385"></a>
+	      	
+	      	<div id="li-comment-30385" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/f754c7da2e0d6c91829abd08b0a4cc88?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name"><a href='http://youweyoucoding.com' rel='external nofollow' class='url url'>Erik Gyepes</a></span>           
+	                <span class="date">February 16, 2012 at 10:13 pm</span>
+	                <span class="perma"><a href="index.html#comment-30385" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-30385">
+				
+				<p>BTW &#8211; this does not work when you post the form (through AJAX) and there are errors. Then the placeholder&#8217;s are gone..</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment odd alt thread-odd thread-alt depth-1">
+	    
+	    	<a name="comment-44642"></a>
+	      	
+	      	<div id="li-comment-44642" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://0.gravatar.com/avatar/ec603814e3553d0ac3067ed0f5f73ab2?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name">Nick</span>           
+	                <span class="date">August 16, 2012 at 3:57 pm</span>
+	                <span class="perma"><a href="index.html#comment-44642" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-44642">
+				
+				<p>Wahey! Brilliant stuff, worked a treat. Cheers!</p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+	                 
+		<li class="comment even thread-even depth-1">
+	    
+	    	<a name="comment-50341"></a>
+	      	
+	      	<div id="li-comment-50341" class="comment-container">
+	      	
+					                <div class="avatar"><img alt='' src='http://1.gravatar.com/avatar/12176645e8ca93caceba4929c6f903bb?s=40&amp;d=&amp;r=G' class='photo avatar avatar-40 photo' height='40' width='40' /></div>
+	                        
+	
+		      	<div class="comment-head">
+		      	            
+	                <span class="name">Naude</span>           
+	                <span class="date">October 31, 2012 at 11:49 am</span>
+	                <span class="perma"><a href="index.html#comment-50341" title="Direct link to this comment">#</a></span>
+	                <span class="edit"></span>
+		        		          	
+				</div><!-- /.comment-head -->
+		      
+		   		<div class="comment-entry"  id="comment-50341">
+				
+				<p>Erik, to get it to work with AJAX, you have to bind the &#8220;gform_post_render&#8221; event. So on line 7 of the third function,<br />
+replace jQuery(function(){<br />
+with<br />
+jQuery(document).bind(&#8216;gform_post_render&#8217;, function(){<br />
+and bobs your uncle <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' /> </p>
+		            
+										
+	                <div class="reply">
+	                    	                </div><!-- /.reply -->                       
+			
+				</div><!-- /comment-entry -->
+	
+			</div><!-- /.comment-container -->
+			
+	</li>
+		
+		</ol>    
+
+		<div class="navigation">
+			<div class="fl"></div>
+			<div class="fr"></div>
+			<div class="fix"></div>
+		</div><!-- /.navigation -->
+			    
+	    		
+        <h3 id="pings">Trackbacks/Pingbacks</h3>
+    
+        <ol class="pinglist">
+            		
+		<li id="comment-47988">
+			<span class="author"><a href='http://askwpgirl.com/gravity-forms-placeholder-text-works-with-ie/' rel='external nofollow' class='url'>Gravity Forms Placeholder Text that Works with IE | WordPress Website Help and Development | Ask WP Girl | Angela Bowman - Boulder, Colorado</a></span> - 
+			<span class="date">October 15, 2012</span>
+			<span class="pingcontent"><p>[...] June 22, 2011, Jorge Pedret, a freelance web developer, came up with a solution to the Gravity Forms placeholder problem with a clever function and script that could be added to your theme&#8217;s functions.php file. [...]</p>
+</span>
+	
+	</li>
+		
+		<li id="comment-64689">
+			<span class="author"><a href='http://askwpgirl.com/jumpstart/?p=497' rel='external nofollow' class='url'>Gravity Forms Placeholder Text that Works with IEJump Start Testing | Jump Start Testing</a></span> - 
+			<span class="date">February 6, 2013</span>
+			<span class="pingcontent"><p>[...] June 22, 2011, Jorge Pedret, a freelance web developer, came up with a solution to the Gravity Forms placeholder problem with a clever function and script that could be added to your theme&#8217;s functions.php file. [...]</p>
+</span>
+	
+	</li>
+        </ol>
+    	
+	    	
+
+</div> <!-- /#comments_wrap -->
+
+
+<div id="respond">
+
+	<h3>Leave a Reply</h3>
+	
+	<div class="cancel-comment-reply">
+		<small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Click here to cancel reply.</a></small>
+	</div><!-- /.cancel-comment-reply -->
+
+		
+		<form action="http://jorgepedret.com/wp-comments-post.php" method="post" id="commentform">
+
+		
+			<p>
+				<input type="text" name="author" class="txt" id="author" value="" size="22" tabindex="1" />
+				<label for="author">Name  (Required) </label>
+			</p>
+
+			<p>
+				<input type="text" name="email" class="txt" id="email" value="" size="22" tabindex="2" />
+				<label for="email">Mail (will not be published)  (Required) </label>
+			</p>
+
+			<p>
+				<input type="text" name="url" class="txt" id="url" value="" size="22" tabindex="3" />
+				<label for="url">Website</label>
+			</p>
+
+		
+		<!--<p><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </p>-->
+
+		<p><textarea name="comment" id="comment" rows="10" cols="50" tabindex="4"></textarea></p>
+
+		<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="Submit Comment" />
+		<input type="hidden" name="comment_post_ID" value="537" />
+		
+		<input type='hidden' name='comment_post_ID' value='537' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e4d6e5b65c" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>
+		</form><!-- /#commentform -->
+
+	
+	<div class="fix"></div>
+
+</div><!-- /#respond -->
+
+                                                
+		  
+        
+		</div><!-- #main -->
+
+        <div id="sidebar" class="fr">
+
+	
+				<div id="woo_blogauthorinfo-3" class="widget widget_woo_blogauthorinfo">		<h3>About me</h3>		
+		<span class="left"><img alt='' src='http://0.gravatar.com/avatar/01392c6c5dfb724dab5c82784e1dae4c?s=96&amp;d=&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' /></span>
+		<p>I'm a creative Front End Developer & Designer with 11 years of experience <strong>designing and coding web applications.</strong> I currently live in <strong>Vancouver, Canada</strong>, where I build websites for startups and small businesses.</p>
+		<p><a href="../../../about-me/index.html">Read more</a></p>		<div class="fix"></div>
+		</div>   
+    		<div id="woo_search-3" class="widget widget_woo_search">        <h3>Search</h3>        <div class="search_main">
+    <form method="get" class="searchform" action="../../../index.html" >
+        <input type="text" class="field s" name="s" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" />
+        <input type="image" src="../../../wp-content/themes/elefolio/images/ico-search.png" class="submit" name="submit" value="Go" />
+    </form>    
+    <div class="fix"></div>
+</div>
+		</div>   
+   <div id="text-4" class="widget widget_text">			<div class="textwidget"><!-- Add these tags to the HEAD section of your page. -->
+
+<link href="http://coderwall.com/stylesheets/jquery.coderwall.css" media="all" rel="stylesheet" type="text/css">
+<script src="http://coderwall.com/javascripts/jquery.coderwall.js"></script>
+
+<!-- You also need to place a container where you'd like the Coderwall badges to render. -->
+<section class="coderwall" data-coderwall-username="jorgepedret" data-coderwall-orientation="horizontal"></section>
+<div class="clear"></div></div>
+		</div><div class="adspace-widget widget">		
+		<div id="md-sidebar-widget"></div>
+<script type="text/javascript">
+(function() {
+  var url = 'http://www.mightydeals.com/widgets/sidebar?refID=16917d';
+  var s = document.createElement('script'), s1 = document.getElementsByTagName('script')[0];
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = url;
+  s1.parentNode.insertBefore(s, s1);
+})();
+</script>		
+		</div><div class="adspace-widget widget">		
+		<a href="https://jorgepedret.freshbooks.com/refer/www" style="background-color: transparent;"><img src="http://www.freshbooks.com/images/banners/fb200x200-pro.png" width="200" height="200" border="0" alt="FreshBooks" /></a>		
+		</div><div class="adspace-widget widget">		
+		<a href="http://www.mediatemple.net#a_aid=4f973c697739a&a_bid=28709c40" target="_top"><img src="https://affiliate.mediatemple.net/accounts/default1/banners/mt-234x60-dk.gif" alt="Reliable Web Hosting by (mt) Media Temple" title="Reliable Web Hosting by (mt) Media Temple" width="234" height="60" /></a><img style="border:0" src="https://affiliate.mediatemple.net/scripts/imp.php?a_aid=4f973c697739a&a_bid=28709c40" width="1" height="1" alt="" />		
+		</div>  
+
+ 		<div id="tabs">
+           
+            <ul class="wooTabs">
+                                <li class="popular"><a href="index.html#tab-pop">Popular</a></li>                <li class="latest"><a href="index.html#tab-latest">Latest</a></li>                <li class="comments"><a href="index.html#tab-comm">Comments</a></li>                <li class="tags"><a href="index.html#tab-tags">Tags</a></li>            </ul>
+            
+            <div class="clear"></div>
+            
+            <div class="boxes box inside">
+                        
+	                            
+                                <ul id="tab-pop" class="list">            
+                    	<li>
+				<a title="Get pages by template name in WordPress" href="../../get-pages-by-template-name-in-wordpress/index.html">Get pages by template name in WordPress</a>
+		<span class="meta">June 21, 2011</span>
+		<div class="fix"></div>
+	</li>
+		<li>
+				<a title="Placeholder text for Gravity Form input elements" href="../index.html">Placeholder text for Gravity Form input elements</a>
+		<span class="meta">June 22, 2011</span>
+		<div class="fix"></div>
+	</li>
+		<li>
+				<a title="My Notes for &#8220;Strangest WordPress Project&#8221;" href="../../my-notes-for-strangest-wordpress-project/index.html">My Notes for &#8220;Strangest WordPress Project&#8221;</a>
+		<span class="meta">May 6, 2011</span>
+		<div class="fix"></div>
+	</li>
+	                    
+                </ul>
+                                                <ul id="tab-latest" class="list">
+                    	<li>
+				<a title="If you don&#8217;t ask, the answer is always no" href="../../../uncategorized/if-you-dont-ask-the-answer-is-always-no/index.html">If you don&#8217;t ask, the answer is always no</a>
+		<span class="meta">August 24, 2012</span>
+		<div class="fix"></div>
+	</li>
+		<li>
+				<a title="We are on the cusp of the broader adoption of JS" href="../../we-are-on-the-cusp-of-the-broader-adoption-of-js-2/index.html">We are on the cusp of the broader adoption of JS</a>
+		<span class="meta">July 16, 2012</span>
+		<div class="fix"></div>
+	</li>
+		<li>
+				<a title="Dynamic file paths using Require.js" href="../../dynamic-file-paths-using-require-js/index.html">Dynamic file paths using Require.js</a>
+		<span class="meta">July 10, 2012</span>
+		<div class="fix"></div>
+	</li>
+	                    
+                </ul>
+                                				<ul id="tab-comm" class="list">
+                    		<li>
+			<img alt='' src='http://1.gravatar.com/avatar/1b26427c1f53b5e5c708ea05cbf76b05?s=96&amp;d=&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />		
+			<a href="../../get-pages-by-template-name-in-wordpress/index.html#comment-56264" title="on  Get pages by template name in WordPress">
+				Simon: Thank You !!!...
+			</a>
+			<div class="fix"></div>
+		</li>
+				<li>
+			<img alt='' src='http://1.gravatar.com/avatar/12176645e8ca93caceba4929c6f903bb?s=96&amp;d=&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />		
+			<a href="../index.html#comment-50341" title="on  Placeholder text for Gravity Form input elements">
+				Naude: Erik, to get it to work with AJAX, you have to bin...
+			</a>
+			<div class="fix"></div>
+		</li>
+				<li>
+			<img alt='' src='http://1.gravatar.com/avatar/be6e37e7174d88957548c708abedaa99?s=96&amp;d=&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />		
+			<a href="../../get-pages-by-template-name-in-wordpress/index.html#comment-48962" title="on  Get pages by template name in WordPress">
+				prasad: Thanks for the solution.........
+			</a>
+			<div class="fix"></div>
+		</li>
+		                    
+                </ul>                
+                                                <div id="tab-tags" class="list">
+                    <a href='../../../tag/campaign-monitor/index.html' class='tag-link-71' title='2 topics' style='font-size: 12pt;'>campaign monitor</a>
+<a href='../../../tag/character/index.html' class='tag-link-167' title='5 topics' style='font-size: 14.086956521739pt;'>character</a>
+<a href='../../../tag/code/index.html' class='tag-link-15' title='2 topics' style='font-size: 12pt;'>code</a>
+<a href='../../../tag/comics/index.html' class='tag-link-94' title='6 topics' style='font-size: 14.573913043478pt;'>comics</a>
+<a href='../../../tag/compass/index.html' class='tag-link-57' title='3 topics' style='font-size: 12.834782608696pt;'>compass</a>
+<a href='../../../tag/cook/index.html' class='tag-link-184' title='3 topics' style='font-size: 12.834782608696pt;'>cook</a>
+<a href='../../../tag/css/index.html' class='tag-link-10' title='10 topics' style='font-size: 15.895652173913pt;'>CSS</a>
+<a href='../../../tag/css3/index.html' class='tag-link-58' title='16 topics' style='font-size: 17.217391304348pt;'>css3</a>
+<a href='../../../tag/daily-posts/index.html' class='tag-link-160' title='21 topics' style='font-size: 17.982608695652pt;'>daily posts</a>
+<a href='../../../tag/design/index.html' class='tag-link-17' title='42 topics' style='font-size: 20pt;'>design</a>
+<a href='../../../tag/development/index.html' class='tag-link-131' title='8 topics' style='font-size: 15.269565217391pt;'>development</a>
+<a href='../../../tag/ecommerce/index.html' class='tag-link-73' title='2 topics' style='font-size: 12pt;'>ecommerce</a>
+<a href='../../../tag/facebook/index.html' class='tag-link-77' title='2 topics' style='font-size: 12pt;'>facebook</a>
+<a href='../../../tag/fix/index.html' class='tag-link-18' title='2 topics' style='font-size: 12pt;'>fix</a>
+<a href='../../../tag/free/index.html' class='tag-link-91' title='2 topics' style='font-size: 12pt;'>free</a>
+<a href='../../../tag/generator/index.html' class='tag-link-78' title='4 topics' style='font-size: 13.530434782609pt;'>generator</a>
+<a href='../../../tag/gravity-forms/index.html' class='tag-link-103' title='2 topics' style='font-size: 12pt;'>gravity forms</a>
+<a href='../../../tag/grids/index.html' class='tag-link-59' title='2 topics' style='font-size: 12pt;'>grids</a>
+<a href='../../../tag/how-to/index.html' class='tag-link-203' title='5 topics' style='font-size: 14.086956521739pt;'>how-to</a>
+<a href='../../../tag/html/index.html' class='tag-link-21' title='11 topics' style='font-size: 16.173913043478pt;'>html</a>
+<a href='../../../tag/html5/index.html' class='tag-link-39' title='15 topics' style='font-size: 17.008695652174pt;'>html5</a>
+<a href='../../../tag/ie7/index.html' class='tag-link-11' title='2 topics' style='font-size: 12pt;'>IE7</a>
+<a href='../../../tag/illustration/index.html' class='tag-link-68' title='21 topics' style='font-size: 17.982608695652pt;'>illustration</a>
+<a href='../../../tag/illustrator/index.html' class='tag-link-123' title='4 topics' style='font-size: 13.530434782609pt;'>illustrator</a>
+<a href='../../../tag/image/index.html' class='tag-link-108' title='5 topics' style='font-size: 14.086956521739pt;'>image</a>
+<a href='../../../tag/interaction-design/index.html' class='tag-link-116' title='4 topics' style='font-size: 13.530434782609pt;'>interaction design</a>
+<a href='../../../tag/javascript/index.html' class='tag-link-22' title='9 topics' style='font-size: 15.617391304348pt;'>javascript</a>
+<a href='../../../tag/jquery/index.html' class='tag-link-12' title='25 topics' style='font-size: 18.469565217391pt;'>jQuery</a>
+<a href='../../../tag/js/index.html' class='tag-link-141' title='4 topics' style='font-size: 13.530434782609pt;'>js</a>
+<a href='../../../tag/landing-page/index.html' class='tag-link-196' title='4 topics' style='font-size: 13.530434782609pt;'>landing page</a>
+<a href='../../../tag/patterns/index.html' class='tag-link-81' title='2 topics' style='font-size: 12pt;'>patterns</a>
+<a href='../../../tag/photoshop/index.html' class='tag-link-72' title='25 topics' style='font-size: 18.469565217391pt;'>photoshop</a>
+<a href='../../../tag/php/index.html' class='tag-link-26' title='14 topics' style='font-size: 16.869565217391pt;'>php</a>
+<a href='../../../tag/plugin/index.html' class='tag-link-27' title='3 topics' style='font-size: 12.834782608696pt;'>plugin</a>
+<a href='../../../tag/psd-to-html/index.html' class='tag-link-67' title='2 topics' style='font-size: 12pt;'>psd to html</a>
+<a href='../../../tag/require-js/index.html' class='tag-link-228' title='3 topics' style='font-size: 12.834782608696pt;'>require.js</a>
+<a href='../../../tag/resources/index.html' class='tag-link-92' title='4 topics' style='font-size: 13.530434782609pt;'>resources</a>
+<a href='../../../tag/sketchbook-pro/index.html' class='tag-link-180' title='4 topics' style='font-size: 13.530434782609pt;'>sketchbook pro</a>
+<a href='../../../tag/snippet/index.html' class='tag-link-52' title='2 topics' style='font-size: 12pt;'>snippet</a>
+<a href='../../../tag/tools-2/index.html' class='tag-link-79' title='4 topics' style='font-size: 13.530434782609pt;'>tools</a>
+<a href='../../../tag/tricks/index.html' class='tag-link-30' title='5 topics' style='font-size: 14.086956521739pt;'>tricks</a>
+<a href='../../../tag/utilities/index.html' class='tag-link-82' title='2 topics' style='font-size: 12pt;'>utilities</a>
+<a href='../../../tag/wcdev/index.html' class='tag-link-130' title='6 topics' style='font-size: 14.573913043478pt;'>wcdev</a>
+<a href='../../../tag/web-development/index.html' class='tag-link-7' title='3 topics' style='font-size: 12.834782608696pt;'>Web Development</a>
+<a href='../../../tag/wordpress/index.html' class='tag-link-8' title='25 topics' style='font-size: 18.469565217391pt;'>Wordpress</a>                </div>                
+                
+            </div><!-- /.boxes -->
+			
+        </div><!-- /wooTabs -->
+    
+         		<div id="woo_twitter-3" class="widget widget_woo_twitter">        <h3>On Twitter</h3>        
+        <div class="back"><ul id="twitter_update_list_woo_twitter-3"><li></li></ul>
+        <p>Follow <a href="http://twitter.com/jorgepedret"><strong>@jorgepedret</strong></a> on Twitter</p></div><div class="clear"></div>
+        	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+
+	    function twitterCallback2(twitters) {
+
+	      var statusHTML = [];
+	      for (var i=0; i<twitters.length; i++){
+	        var username = twitters[i].user.screen_name;
+	        var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
+	          return '<a href="'+url+'">'+url+'</a>';
+	        }).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
+	          return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+	        });
+	        statusHTML.push( '<li><span class="content">'+status+'</span> <a style="font-size:85%" class="time" href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a></li>' );
+	      }
+	      document.getElementById( 'twitter_update_list_woo_twitter-3').innerHTML = statusHTML.join( '' );
+	    }
+
+	    function relative_time(time_value) {
+	      var values = time_value.split( " " );
+	      time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
+	      var parsed_date = Date.parse(time_value);
+	      var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
+	      var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
+	      delta = delta + (relative_to.getTimezoneOffset() * 60);
+
+	      if (delta < 60) {
+	        return 'less than a minute ago';
+	      } else if(delta < 120) {
+	        return 'about a minute ago';
+	      } else if(delta < (60*60)) {
+	        return (parseInt(delta / 60)).toString() + ' minutes ago';
+	      } else if(delta < (120*60)) {
+	        return 'about an hour ago';
+	      } else if(delta < (24*60*60)) {
+	        return 'about ' + (parseInt(delta / 3600)).toString() + ' hours ago';
+	      } else if(delta < (48*60*60)) {
+	        return '1 day ago';
+	      } else {
+	        return (parseInt(delta / 86400)).toString() + ' days ago';
+	      }
+	    }
+	//-->!]]>
+	</script>
+	<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/jorgepedret.json?callback=twitterCallback2&amp;count=3&amp;include_rts=t"></script>
+		 
+        </div>        
+   		
+	<div id="linkcat-33" class="widget widget_links"><h3>Colleagues</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://fsquaredesign.com/" rel="friend met co-worker colleague neighbor" title="An exceptional communicator with an intelligent and creative sense of design.">Flynn O&#039;Connor</a></li>
+<li><a href="http://citrusfreshdesign.com/" rel="friend colleague" title="Web Designer. Graphics Instructor. Board Game Geek.">Jesh Barlow</a></li>
+<li><a href="http://www.tecnogente.info/" rel="friend met colleague" title="Great Web Developer, entrepreneur and blogger">Roderick Smith</a></li>
+<li><a href="http://www.sankalp-patel.com/" rel="friend met colleague neighbor" title="Web Developer and Web Designer">Sankalp Patel</a></li>
+
+	</ul>
+</div>
+<div id="linkcat-32" class="widget widget_links"><h3>Friends</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://candyboxmarketing.com/" rel="friend met colleague neighbor" title="Internet Solutions that work &#8211; Generate Leads for your business">Candybox Marketing</a></li>
+<li><a href="http://fsquaredesign.com/" rel="friend met co-worker colleague neighbor" title="An exceptional communicator with an intelligent and creative sense of design.">Flynn O&#039;Connor</a></li>
+<li><a href="http://gasesnobles.blogspot.com/" rel="friend met colleague" title="&#8220;&#8230;pensamientos comunes en una mente friki&#8221;">Gases Nobles</a></li>
+<li><a href="http://modgraphic.com/" rel="friend met colleague neighbor" title="Graphic Design Agency">Modgraphic</a></li>
+<li><a href="http://www.tecnogente.info/" rel="friend met colleague" title="Great Web Developer, entrepreneur and blogger">Roderick Smith</a></li>
+<li><a href="http://www.sankalp-patel.com/" rel="friend met colleague neighbor" title="Web Developer and Web Designer">Sankalp Patel</a></li>
+<li><a href="http://seemyclients.com/" rel="friend met co-worker colleague" title="Increase traffic to your website, execute a creative campaign or simply upgrade your website with a creative Online Video experience.">See My Clients</a></li>
+
+	</ul>
+</div>
+<div id="linkcat-36" class="widget widget_links"><h3>Keep an eye on...</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://carsonified.com/" rel="colleague" title="Web applications + world-class events for the web industry">Carsonified</a></li>
+<li><a href="http://illustrationtoolbox.com/" title="Collection of the best examples of illustration in web design and illustrated art with articles, tutorials, tips and resources for illustrators and designers.">Illustration Toolbox</a></li>
+<li><a href="http://www.inspireux.com/" rel="colleague" title="Words to inspire UX Designers">InspireUX</a></li>
+
+	</ul>
+</div>
+<div id="linkcat-37" class="widget widget_links"><h3>Masters &amp; Gurus</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.stuffandnonsense.co.uk/" rel="colleague" title="Small web site design studio, led by designer and author Andy Clarke">Andy Clarke</a></li>
+<li><a href="http://meyerweb.com/" rel="colleague" title="CSS Guru">Eric A. Meyer</a></li>
+<li><a href="http://bokardo.com/" rel="colleague" title="Social Web Designer">Joshua Porter</a></li>
+
+	</ul>
+</div>
+		           
+
+		
+</div><!-- /#sidebar -->
+    </div><!-- #content -->
+		
+
+	<div class="fix"></div>
+
+    <div id="footer">
+    
+		<div id="footer-wrap" class="col-full">    
+            
+            <div id="copyright" class="fl">
+									<p>&copy; 2013 Jorge Pedret. All Rights Reserved.</p>
+				            </div><!-- /#copyright -->
+            
+            <div id="credit" class="fr">
+		        					<p>Powered by <a href="http://www.wordpress.org">WordPress</a>. Designed by <a href="http://www.woothemes.com/amember/go.php?r=28621&i=l108"><img src="../../../wp-content/themes/elefolio/images/woothemes.png" width="74" height="19" alt="Woo Themes" /></a></p>
+				            </div><!-- /#main -->
+            
+            <div class="fix"></div>
+		</div><!-- /#footer-wrap -->
+
+    </div><!-- /#footer -->
+
+</div><!-- /#wrapper -->
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?aa&#038;ver=3.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/jetpack/modules/wpgroho.js@ver=3.4.1'></script>
+	<div style="display:none">
+	<div class="grofile-hash-map-a1c1225be8d547f7eee7fe94e8a3f7ac">
+	</div>
+	<div class="grofile-hash-map-01392c6c5dfb724dab5c82784e1dae4c">
+	</div>
+	<div class="grofile-hash-map-af9a9c081c9f1292e51ea351361b3f27">
+	</div>
+	<div class="grofile-hash-map-5597766e58aea8d7149ac82cc725f404">
+	</div>
+	<div class="grofile-hash-map-b94fa05e84b3cbd8743438f6f2c10b6e">
+	</div>
+	<div class="grofile-hash-map-9cd5983cb0645f75374798463cfddc3d">
+	</div>
+	<div class="grofile-hash-map-f70e3ba1b3ab21469a2a0597b92e971e">
+	</div>
+	<div class="grofile-hash-map-f754c7da2e0d6c91829abd08b0a4cc88">
+	</div>
+	<div class="grofile-hash-map-ec603814e3553d0ac3067ed0f5f73ab2">
+	</div>
+	<div class="grofile-hash-map-12176645e8ca93caceba4929c6f903bb">
+	</div>
+	<div class="grofile-hash-map-1b26427c1f53b5e5c708ea05cbf76b05">
+	</div>
+	<div class="grofile-hash-map-be6e37e7174d88957548c708abedaa99">
+	</div>
+	</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11181880-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Woo Tabs Widget -->
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	// UL = .wooTabs
+	// Tab contents = .inside
+	
+	var tag_cloud_class = '#tagcloud'; 
+	
+	//Fix for tag clouds - unexpected height before .hide() 
+	var tag_cloud_height = jQuery('#tagcloud').height();
+	
+	jQuery('.inside ul li:last-child').css('border-bottom','0px'); // remove last border-bottom from list in tab content
+	jQuery('.wooTabs').each(function(){
+		jQuery(this).children('li').children('a:first').addClass('selected'); // Add .selected class to first tab on load
+	});
+	jQuery('.inside > *').hide();
+	jQuery('.inside > *:first-child').show();
+	
+	jQuery('.wooTabs li a').click(function(evt){ // Init Click funtion on Tabs
+	
+		var clicked_tab_ref = jQuery(this).attr('href'); // Strore Href value
+		
+		jQuery(this).parent().parent().children('li').children('a').removeClass('selected'); //Remove selected from all tabs
+		jQuery(this).addClass('selected');
+		jQuery(this).parent().parent().parent().children('.inside').children('*').hide();
+		
+		jQuery('.inside ' + clicked_tab_ref).fadeIn(500);
+		 
+		 evt.preventDefault();
+	
+	})
+})
+</script>
+<script type='text/javascript' src='../../../wp-content/plugins/jetpack/modules/sharedaddy/sharing.js@ver=0.1'></script>
+	<div id="sharing_email" style="display: none;">
+		<form action="index.html" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="text" name="target_email" id="target_email" value="" />
+			
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+				
+				<label for="source_email">Your Email Address</label>
+				<input type="text" name="source_email" id="source_email" value="" />
+
+						
+			
+			<img style="float: right; display: none" class="loading" src="../../../wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a href="index.html#cancel" class="sharing_cancel">Cancel</a>
+			
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+			
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js@ver=3.0.83c'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js@ver=3.0.83c'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://jorgepedret.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://jorgepedret.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+	<script src="http://stats.wordpress.com/e-201324.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:1.4.2',blog:'22098202',post:'537'});
+	var load_cmc = function(){linktracker_init(22098202,537,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script></body>
+</html>

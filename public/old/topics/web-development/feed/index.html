@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; Web Development</title>
+	<atom:link href="http://jorgepedret.com/topics/web-development/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>We are on the cusp of the broader adoption of JS</title>
+		<link>http://jorgepedret.com/web-development/we-are-on-the-cusp-of-the-broader-adoption-of-js-2/</link>
+		<comments>http://jorgepedret.com/web-development/we-are-on-the-cusp-of-the-broader-adoption-of-js-2/#comments</comments>
+		<pubDate>Mon, 16 Jul 2012 18:39:00 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[hardware]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[js]]></category>
+		<category><![CDATA[node.js]]></category>
+		<category><![CDATA[robotics]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/web-development/we-are-on-the-cusp-of-the-broader-adoption-of-js-2/</guid>
+		<description><![CDATA[]]></description>
+			<content:encoded><![CDATA[<p></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/we-are-on-the-cusp-of-the-broader-adoption-of-js-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Dynamic file paths using Require.js</title>
+		<link>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/</link>
+		<comments>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/#comments</comments>
+		<pubDate>Tue, 10 Jul 2012 17:07:55 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[cdn]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[require.js]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=731</guid>
+		<description><![CDATA[Here's an article that I wrote in <a href="http://www.beansandcurry.com/">Beans &#038; Curry</a> showing how to use different file paths depending on the environment that your application is running on.]]></description>
+			<content:encoded><![CDATA[<p>Here&#8217;s an article that I wrote in <a href="http://www.beansandcurry.com/">Beans &#038; Curry</a> showing how to use different file paths depending on the environment that your application is running on.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Connecting existing git repository with an existing remote github repository</title>
+		<link>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/</link>
+		<comments>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/#comments</comments>
+		<pubDate>Fri, 06 Jul 2012 16:47:35 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[managing github]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[repository]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=715</guid>
+		<description><![CDATA[This often happens to me whenever I start a new project: I start working locally on a brand new project I go to GitHub and create a new repository for my project Confused, start Google-ing how to connect the two of them How do I connect them? Here&#8217;s what you need to do to connect [...]]]></description>
+			<content:encoded><![CDATA[<p>This often happens to me whenever I start a new project:</p>
+<ol>
+<li>I start working locally on a brand new project</li>
+<li>I go to GitHub and create a new repository for my project</li>
+<li>Confused, start Google-ing how to connect the two of them</li>
+</ol>
+<h2>How do I connect them?</h2>
+<p>Here&#8217;s what you need to do to connect your local git repo with your remote github repo:</p>
+<pre class="brush: plain; title: ; notranslate">
+cd /my/local/project/path/
+git init
+git remote add --track master origin git@github.com:jorgepedret/foo.git
+</pre>
+<ol>
+<li>CD into your local project directory</li>
+<li>Run git init, if you haven&#8217;t ran it yet</li>
+<li>Connect the remote repo with your local repo</li>
+</ol>
+<p>Done!</p>
+<p>Now you can commit your changes, pull rebase and then push to your remote repository</p>
+<pre class="brush: plain; title: ; notranslate">
+git add .
+git commit -m &quot;Initial commit&quot;
+git pull --rebase origin master
+git push origin master
+</pre>
+<h2>Another way to do it</h2>
+<p>Here&#8217;s another way to connect your local repo with a remote github repo:</p>
+<ol>
+<li>Rename your local project directory</li>
+<li>Clone your GitHub repo specifying the original directory</li>
+<li>Move the original content to the new repository</li>
+<li>Delete the temporary directory created in line 1</li>
+</ol>
+<pre class="brush: plain; title: ; notranslate">
+mv my_project my_project_temp
+git clone https://github.com/jorgepedret/foo.git my_project
+cp -r ./my_project_temp/. my_project
+rm -r ./my_project_temp
+</pre>
+<h2>What&#8217;s the correct way to do it?</h2>
+<p>The correct way to do it is to start your GitHub repository before starting to code. That way you can simply use git clone and then just start working on it.</p>
+<p>That&#8217;s it! Thanks to <a href="http://caiustheory.com/adding-a-remote-to-existing-git-repo">Caius Theory</a> and <a href="http://ciaranwal.sh/">Ciarán Walsh</a> for helping me find a solution for this problem.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Cloning a remote WordPress site in your local computer</title>
+		<link>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/</link>
+		<comments>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/#comments</comments>
+		<pubDate>Wed, 16 May 2012 21:30:24 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[how-to]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[tricks]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=702</guid>
+		<description><![CDATA[This is a trick that I usually use when I need to clone an existing WordPress installation in my local computer.]]></description>
+			<content:encoded><![CDATA[<p>This is a trick that I usually use when I need to clone an existing WordPress installation in my local computer.</p>
+<ol>
+<li>Clone all the remote WordPress files in your local computer.</li>
+<li>Clone the remote WordPress database into your local computer.</li>
+<li>Update the wp-config.php file with your local MySQL access info and database name.</li>
+<li>Replace the old domain with the new domain in your local MySQL by running this commands:</li>
+</ol>
+<pre class="brush: sql; title: ; notranslate">
+UPDATE wp_options SET option_value = REPLACE(option_value, 'http://old.domain.com', 'http://new.domain.com');
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://old.domain.com', 'http://new.domain.com');
+</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>What is considered a tabular data?</title>
+		<link>http://jorgepedret.com/web-development/what-is-considered-a-tabular-data/</link>
+		<comments>http://jorgepedret.com/web-development/what-is-considered-a-tabular-data/#comments</comments>
+		<pubDate>Fri, 20 Apr 2012 23:29:47 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[semantics]]></category>
+		<category><![CDATA[tables]]></category>
+		<category><![CDATA[tabular data]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=671</guid>
+		<description><![CDATA[If the data was designed or positioned differently, would you still make it a table?]]></description>
+			<content:encoded><![CDATA[<p>When trying to consider if some piece of data in the design is a table or not, this is a good question to ask yourself: If the data was designed or positioned differently, would you still make it a table?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/what-is-considered-a-tabular-data/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Loading Google Maps API on demand</title>
+		<link>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/</link>
+		<comments>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/#comments</comments>
+		<pubDate>Fri, 20 Apr 2012 23:17:13 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[google maps]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[js]]></category>
+		<category><![CDATA[lazy loading]]></category>
+		<category><![CDATA[on demand]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=686</guid>
+		<description><![CDATA[Here's another quick snipped that I used recently to load Google Maps on demand.]]></description>
+			<content:encoded><![CDATA[<p>Here&#8217;s another quick snipped that I used recently to load Google Maps on demand.</p>
+<pre class="brush: jscript; title: ; notranslate">
+function loadGoogleMapsApi(){
+	if(typeof google === &quot;undefined&quot;){
+		var script = document.createElement(&quot;script&quot;);
+		script.src = &quot;https://maps.google.com/maps/api/js?sensor=false&amp;callback=loadGoogleMapsApiReady&quot;;
+		document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+	} else {
+		loadGoogleMapsApiReady();
+	}
+}
+function loadGoogleMapsApiReady(){
+	$(&quot;body&quot;).trigger(&quot;gmap_loaded&quot;);
+}
+</pre>
+<p>First we define the <code>loadGoogleMapsApi</code> function, where we include the script tag which is going to start loading Google Maps&#8217; API. Notice in line 4 how we define the callback function <code>loadGoogleMapsApiReady</code>. This is the function that will be executed after the library has been loaded.</p>
+<p>The second step is defining the callback function <code>loadGoogleMapsApiReady</code>. This function simply triggers the custom even <code>gmap_loaded</code> on the body.</p>
+<p>You&#8217;re all set now! Now is time to use the on demand functionality. For that you only need to attach some functionality to the custom event <code>gmap_loaded</code> triggered on the body tag. See below:</p>
+<pre class="brush: jscript; title: ; notranslate">
+$(&quot;body&quot;).bind(&quot;gmap_loaded&quot;, function(){
+	alert(&quot;Google map is loaded and ready to be used!&quot;);
+});
+loadGoogleMapsApi();
+</pre>
+<p>If you want to load the Google Maps API on a button click, you could do something like this:</p>
+<pre class="brush: jscript; title: ; notranslate">
+$(&quot;.my-btn&quot;).click(function(){
+	$(&quot;body&quot;).bind(&quot;gmap_loaded&quot;, function(){
+		alert(&quot;Google map is loaded and ready to be used!&quot;);
+	});
+	loadGoogleMapsApi();
+});
+</pre>
+<p>Let me know what you think and how it worked for you.</p>
+<p>Here&#8217;s a link to the snippet on the gist: <a href="https://gist.github.com/2432506">https://gist.github.com/2432506</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Require.js including multiple files and managing packages</title>
+		<link>http://jorgepedret.com/web-development/require-js-including-multiple-files-and-managing-packages/</link>
+		<comments>http://jorgepedret.com/web-development/require-js-including-multiple-files-and-managing-packages/#comments</comments>
+		<pubDate>Fri, 20 Apr 2012 22:54:33 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[packages]]></category>
+		<category><![CDATA[require.js]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=682</guid>
+		<description><![CDATA[This is a quick way to manage packages or including multiple files using require.js.]]></description>
+			<content:encoded><![CDATA[<p>This is a quick snippet to manage packages or including multiple files using require.js.</p>
+<p>I have a couple of pages that need a set of files, so instead of including one by one in all the pages, I created a function that calls requires them all, keeping the callback function.</p>
+<pre class="brush: jscript; title: ; notranslate">
+require_form = function (callback) {
+	require([
+		&quot;form&quot;,
+		&quot;validate&quot;,
+		&quot;multiselect&quot;,
+		&quot;form_extend&quot;
+		], function(){
+			require([&quot;my_validate&quot;], callback);
+		}
+	);
+};
+</pre>
+<p>Whenever I need to require the form set of files, I call:</p>
+<pre class="brush: jscript; title: ; notranslate">
+require_form(function(){
+	alert('All form files are loaded!');
+});
+</pre>
+<p>Check out code on the gist <a href="https://gist.github.com/2432457">https://gist.github.com/2432457</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/require-js-including-multiple-files-and-managing-packages/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Fontomas</title>
+		<link>http://jorgepedret.com/web-development/fontomas/</link>
+		<comments>http://jorgepedret.com/web-development/fontomas/#comments</comments>
+		<pubDate>Fri, 09 Mar 2012 00:31:10 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=672</guid>
+		<description><![CDATA[This tool helps to combine iconic webfonts for your project. With fontomas you can: Make a limited symbols subset, with reduced font size, Merge symbols from several fonts to single file, Access large collections of professional-grade open source icons]]></description>
+			<content:encoded><![CDATA[<p>This tool helps to combine iconic webfonts for your project. With fontomas you can:</p>
+<ul>
+<li>make a limited symbols subset, with reduced font size</li>
+<li>merge symbols from several fonts to single file</li>
+<li>access large collections of professional-grade open source icons</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/fontomas/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Solving postMessage issues with form submissions in IE</title>
+		<link>http://jorgepedret.com/web-development/solving-postmessage-issues-with-form-submissions-in-ie/</link>
+		<comments>http://jorgepedret.com/web-development/solving-postmessage-issues-with-form-submissions-in-ie/#comments</comments>
+		<pubDate>Mon, 05 Mar 2012 23:40:03 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=663</guid>
+		<description><![CDATA[Last week I started using the Ben Alman jQuery plugin for posting messages between different windows. Although it worked marvellously in modern browsers, Internet Explorer wouldn&#8217;t work properly for some cases. We&#8217;re currently using postMessage/receiveMessage to dynamically resize an iframe inside our client&#8217;s page. The plugin works in most browsers, including IE. But in my case, it was [...]]]></description>
+			<content:encoded><![CDATA[<p>Last week I started using the <a href="http://benalman.com/projects/jquery-postmessage-plugin/">Ben Alman jQuery plugin</a> for posting messages between different windows. Although it worked marvellously in modern browsers, Internet Explorer wouldn&#8217;t work properly for some cases.</p>
+<p>We&#8217;re currently using postMessage/receiveMessage to dynamically resize an iframe inside our client&#8217;s page. The plugin works in most browsers, including IE. But in my case, it was failing in IE when a form was submitted inside the iframe. It took us a long time to figure out the solution, but we finally came up with a fix.</p>
+<p>In the plugin&#8217;s website, they show and example of how to use it to communicate between two iframes residing in two different domains (<a href="http://benalman.com/code/projects/jquery-postmessage/examples/iframe/">http://benalman.com/code/projects/jquery-postmessage/examples/iframe/</a>). I&#8217;m going to use that example to show you how to solve it.</p>
+<p>After a lot of debugging, we found out that the parent_url wasn&#8217;t being set in IE after the form was submitted. So our solution was to add a hidden field that can hold the parent_url value when the iframe first loads.</p>
+<p>Here&#8217;s a quick example of how to fix the issue using the example posted in the plugins&#8217;s website:</p>
+<p>The child frame code</p>
+<pre class="brush: jscript; title: ; notranslate">
+$(function(){
+	var parent_url, link;
+
+	// Create the hidden input field that will hold the parent_url variable.
+	$(&quot;form&quot;).append('&lt;input id=&quot;parent_url&quot; type=&quot;text&quot; name=&quot;parent_url&quot; /&gt;');
+
+	// We check to see if location hash is empty. It should only go in here if you're using IE and after the form as been submitted.
+	if(document.location.hash == &quot;&quot;){
+		var search 		= document.location.search,
+				id 				= &quot;parent_url=&quot;,
+				hs_start	= search.indexOf('parent_url'),
+				hs_end 		= search.indexOf('&amp;product_service');
+
+		// Get the parent URL from the URL parameters sent by the form
+		parent_url = decodeURIComponent( search.substr(hs_start + id.length, hs_end - id.length - 1) );
+	}
+	// If location hash is not empty, then we just assign it to the variable parent_url
+	else{
+		parent_url = decodeURIComponent( document.location.hash.replace( /^#/, '' ) );
+	}
+	// We assign the value of the parent_url to the hidden input element. That way if document.location.hash is not accessible, it can be accessed
+	$(&quot;#parent_url&quot;).val(parent_url);
+
+	// This is the function that posts a message to the parent for it to resize the iframe
+	function setHeight() {
+		$.postMessage({ if_height: $('body').outerHeight( true ) }, parent_url, parent );
+	};
+
+	setHeight();
+});
+</pre>
+<p>The code for the parent window stays the same as in the example. After applying this changes, the code should work properly after submitting a form.</p>
+<p>Also if you have links in your code and want your iframe to resize every time you go to a new page inside the iframe, try doing something like this in your iframe code:</p>
+<pre class="brush: jscript; title: ; notranslate">
+// Go through each link and append the parent_url variable to the end.
+$(&quot;a&quot;).each(function() {
+	$(this).attr(&quot;href&quot;, $(this).attr(&quot;href&quot;)+&quot;#&quot;+parent_url);
+});
+</pre>
+<p>Hope this post saves somebody a bunch of hours of debugging and IE cursing. If you&#8217;re having a similar problem implementing postMessage/receiveMessage, post a comment and we can figure out together.</p>
+<p><a href="https://gist.github.com/1982122">Checkout the code in the gist</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/solving-postmessage-issues-with-form-submissions-in-ie/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Placeholder text for Gravity Form input elements</title>
+		<link>http://jorgepedret.com/web-development/placeholder-text-for-gravity-form-input-elements/</link>
+		<comments>http://jorgepedret.com/web-development/placeholder-text-for-gravity-form-input-elements/#comments</comments>
+		<pubDate>Wed, 22 Jun 2011 01:55:28 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[forms]]></category>
+		<category><![CDATA[gravity forms]]></category>
+		<category><![CDATA[placeholder]]></category>
+		<category><![CDATA[plugin]]></category>
+		<category><![CDATA[snippet]]></category>
+		<category><![CDATA[text]]></category>
+		<category><![CDATA[tricks]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[wp]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=537</guid>
+		<description><![CDATA[Surprisingly GravityForms hasn't implemented the placeholder feature yet. I know they have plans on doing so soon, but we need a solution while we wait for that. I came up with this quick solution using only GF filters and jQuery. Check it out!]]></description>
+			<content:encoded><![CDATA[<p>Surprisingly GravityForms hasn&#8217;t implemented the placeholder feature yet. I know they have plans on doing so soon, but we need a solution while we wait for that.</p>
+<p>I came up with this quick solution using only GF filters and jQuery.</p>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h2>What the editor will look like</h2>
+<p><img class="size-full wp-image-538" title="form-editor-screenshot" src="http://jorgepedret.com/wp-content/uploads/2011/06/form-editor-screenshot.png" alt="" width="528" height="718" /></p>
+<h2>What the form will look like</h2>
+<p><img class="alignnone size-full wp-image-539" title="form-preview-screenshot" src="http://jorgepedret.com/wp-content/uploads/2011/06/form-preview-screenshot.png" alt="" width="613" height="350" /></p>
+<h2>The code</h2>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h3>Add the placeholder option to the editor</h3>
+<pre class="brush: php; title: ; notranslate">
+/* In the functions.php file */
+/* Add a custom field to the field editor (See editor screenshot) */
+add_action(&quot;gform_field_standard_settings&quot;, &quot;my_standard_settings&quot;, 10, 2);
+function my_standard_settings($position, $form_id){
+	// Create settings on position 25 (right after Field Label)
+	if($position == 25){
+		?&gt;
+		&lt;li class=&quot;admin_label_setting field_setting&quot; style=&quot;display: list-item; &quot;&gt;
+			&lt;label for=&quot;field_placeholder&quot;&gt;Placeholder Text
+				&lt;!-- Tooltip to help users understand what this field does --&gt;
+				&lt;a href=&quot;javascript:void(0);&quot; class=&quot;tooltip tooltip_form_field_placeholder&quot; tooltip=&quot;&amp;lt;h6&amp;gt;Placeholder&amp;lt;/h6&amp;gt;Enter the placeholder/default text for this field.&quot;&gt;(?)&lt;/a&gt;
+			&lt;/label&gt;
+			&lt;input type=&quot;text&quot; id=&quot;field_placeholder&quot; class=&quot;fieldwidth-3&quot; size=&quot;35&quot; onkeyup=&quot;SetFieldProperty('placeholder', this.value);&quot;&gt;
+		&lt;/li&gt;
+		&lt;?php
+	}
+}
+
+/* Now we execute some javascript technicalitites for the field to load correctly */
+add_action(&quot;gform_editor_js&quot;, &quot;my_gform_editor_js&quot;);
+function my_gform_editor_js(){
+	?&gt;
+	&lt;script&gt;
+		//binding to the load field settings event to initialize the checkbox
+		jQuery(document).bind(&quot;gform_load_field_settings&quot;, function(event, field, form){
+			jQuery(&quot;#field_placeholder&quot;).val(field[&quot;placeholder&quot;]);
+		});
+	&lt;/script&gt;
+	&lt;?php
+}
+</pre>
+<h3>Use jQuery to inject the placeholder value to the fields</h3>
+<pre class="brush: php; title: ; notranslate">
+/* In the functions.php file */
+/* We use jQuery to read the placeholder value and inject it to its field */
+add_action('gform_enqueue_scripts',&quot;my_gform_enqueue_scripts&quot;, 10, 2);
+function my_gform_enqueue_scripts($form, $is_ajax=false){
+	?&gt;
+	&lt;script&gt;
+	jQuery(function(){
+		&lt;?php
+		/* Go through each one of the form fields */
+		foreach($form['fields'] as $i=&gt;$field){
+			/* Check if the field has an assigned placeholder */
+			if(isset($field['placeholder']) &amp;&amp; !empty($field['placeholder'])){
+				/* If a placeholder text exists, inject it as a new property to the field using jQuery */
+				?&gt;
+				jQuery('#input_&lt;?php echo $form['id']?&gt;_&lt;?php echo $field['id']?&gt;').attr('placeholder','&lt;?php echo $field['placeholder']?&gt;');
+				&lt;?php
+			}
+		}
+		?&gt;
+	});
+	&lt;/script&gt;
+	&lt;?php
+}
+</pre>
+<p>That&#8217;s it! take it for a spin and let me know how it goes.</p>
+<div class="woo-sc-box info   ">Get the final code here <a href="https://gist.github.com/65dd05e3efb0fdafa6be">https://gist.github.com/65dd05e3efb0fdafa6be</a> (It&#8217;s easier to read)</div>
+<h2>Issues</h2>
+<p>Right now it only works with single lines, textareas and the other simple fields. But that&#8217;s usually the only places where you will ever need them.</p>
+<h2>Internet Explorer support update</h2>
+<p><a href="http://askwpgirl.com/">Angela Bowma</a> wrote a post with a <a href="http://askwpgirl.com/gravity-forms-placeholder-text-works-with-ie/">solution that works in Internet Explorer</a> or browsers that don&#8217;t support the placeholder property.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/placeholder-text-for-gravity-form-input-elements/feed/</wfw:commentRss>
+		<slash:comments>17</slash:comments>
+		</item>
+	</channel>
+</rss>

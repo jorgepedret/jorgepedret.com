@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; jQuery</title>
+	<atom:link href="http://jorgepedret.com/tag/jquery/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Dynamic file paths using Require.js</title>
+		<link>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/</link>
+		<comments>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/#comments</comments>
+		<pubDate>Tue, 10 Jul 2012 17:07:55 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[cdn]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[require.js]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=731</guid>
+		<description><![CDATA[Here's an article that I wrote in <a href="http://www.beansandcurry.com/">Beans &#038; Curry</a> showing how to use different file paths depending on the environment that your application is running on.]]></description>
+			<content:encoded><![CDATA[<p>Here&#8217;s an article that I wrote in <a href="http://www.beansandcurry.com/">Beans &#038; Curry</a> showing how to use different file paths depending on the environment that your application is running on.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/dynamic-file-paths-using-require-js/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Accessing the URL hash and parameters using Javascript</title>
+		<link>http://jorgepedret.com/web-development/accessing-the-url-hash-and-parameters-using-javascript/</link>
+		<comments>http://jorgepedret.com/web-development/accessing-the-url-hash-and-parameters-using-javascript/#comments</comments>
+		<pubDate>Mon, 20 Jun 2011 21:27:24 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[access]]></category>
+		<category><![CDATA[hash]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[js]]></category>
+		<category><![CDATA[parameter]]></category>
+		<category><![CDATA[url]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=526</guid>
+		<description><![CDATA[You can access the URL of your page using simple Javascript by using the following code: document.location;]]></description>
+			<content:encoded><![CDATA[<p>You can access the URL of your page using simple Javascript by using the following code:</p>
+<pre class="brush: jscript; title: ; notranslate">
+&lt;script&gt;
+my_url_object = document.location;
+&lt;/script&gt;
+</pre>
+<p>That code yields out something like this in Chrome&#8217;s Javascript console:</p>
+<p><a href="http://jorgepedret.com/wp-content/uploads/2011/06/Screen-shot-2011-06-20-at-2.10.39-PM.png"><img class="size-full wp-image-527 alignnone" title="document.location in Chrome's JS Console" src="http://jorgepedret.com/wp-content/uploads/2011/06/Screen-shot-2011-06-20-at-2.10.39-PM.png" alt="document.location in Chrome's JS Console" width="526" height="235" /></a></p>
+<h2>Example of use:</h2>
+<p>You can show certain section of your code depending on a hash tag in the URL:</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;div id=&quot;section-1&quot; class=&quot;section&quot;&gt;Section 1&lt;/div&gt;
+&lt;div id=&quot;section-2&quot; class=&quot;section&quot;&gt;Section 2&lt;/div&gt;
+&lt;script&gt;
+$(function(){
+	// Get the hash parameter from the URL.
+	active_section = document.location.hash;
+	// Hide ALL the sections
+	$('.section').css('display','none');
+	// Show the section specified in the URL
+	// The URL can be:
+	// - http://localhost/example/index.html#section-1 , or
+	// - http://localhost/example/index.html#section-2
+	$(active_section).css('display','block');
+});
+&lt;/script&gt;
+</pre>
+<p>Post a comment if you need help! <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/accessing-the-url-hash-and-parameters-using-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Video on Interaction Design by Matt Kelly from ZURB</title>
+		<link>http://jorgepedret.com/design-2/video-on-interaction-design-by-matt-kelly-from-zurb/</link>
+		<comments>http://jorgepedret.com/design-2/video-on-interaction-design-by-matt-kelly-from-zurb/#comments</comments>
+		<pubDate>Tue, 26 Apr 2011 21:01:39 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[interaction design]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[matt kelly]]></category>
+		<category><![CDATA[psychology]]></category>
+		<category><![CDATA[user experience]]></category>
+		<category><![CDATA[videos]]></category>
+		<category><![CDATA[web applications]]></category>
+		<category><![CDATA[zurb]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=345</guid>
+		<description><![CDATA[One of my favorite videos about interactions in web applications. A talk by Matt Kelly from ZURB, one of the best interaction design teams out there. Not so much of a technical video, it focus more in explaining the psychology behind what the user is thinking when they're using your app.]]></description>
+			<content:encoded><![CDATA[<p>One of my favorite videos about interactions in web applications. A talk by <a href="http://www.zurb.com/team/matt-kelly">Matt Kelly</a> from <a href="http://www.zurb.com/">ZURB</a>, one of the best interaction design teams out there.</p>
+<p>Not so much of a technical video, it focus more in explaining the psychology behind what the user is thinking when they&#8217;re using your app.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/design-2/video-on-interaction-design-by-matt-kelly-from-zurb/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Code Kick Off: Kick Off your new web project</title>
+		<link>http://jorgepedret.com/tools/code-kick-off-kick-off-your-new-web-project/</link>
+		<comments>http://jorgepedret.com/tools/code-kick-off-kick-off-your-new-web-project/#comments</comments>
+		<pubDate>Wed, 16 Feb 2011 23:16:35 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Tools]]></category>
+		<category><![CDATA[boilerplate]]></category>
+		<category><![CDATA[code kick off]]></category>
+		<category><![CDATA[compass]]></category>
+		<category><![CDATA[css3]]></category>
+		<category><![CDATA[grids]]></category>
+		<category><![CDATA[html5]]></category>
+		<category><![CDATA[jQuery]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=225</guid>
+		<description><![CDATA[Two days ago we launched Code Kick Off and we&#8217;re happy to see a strong response from our first testing users. What is Code Kick Off? Code Kick Off is an application that lets you choose from the most popular web technologies and combine them together in one read-to-go project. For the first release we [...]]]></description>
+			<content:encoded><![CDATA[<p>Two days ago we launched Code Kick Off and we&#8217;re happy to see a strong response from our first testing users. <img src='http://jorgepedret.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> </p>
+<h3>What is Code Kick Off?</h3>
+<p>Code Kick Off is an application that lets you choose from the most popular web technologies  and combine them together in one read-to-go project. For the first  release we let you choose from:</p>
+<h3>HTML5 Boilerplate</h3>
+<h3>Compass</h3>
+<h3>CSS Grids</h3>
+<p>We’re including 4 different grid systems:</p>
+<ul>
+<li><strong><a href="http://www.tinyfluidgrid.com/">Tiny Fluid Grid</a> by <a href="http://www.girlfriendnyc.com/">Girlfriend</a></strong></li>
+<li><strong><a href="http://lessframework.com/">Less Framework</a> by <a href="http://twitter.com/#%21/jonikorpi">Joni Korpi</a></strong></li>
+<li><strong><a href="http://960.gs/">960.gs</a> by <a href="http://sonspring.com/">Nathan Smith</a></strong></li>
+<li><strong><a href="http://www.blueprintcss.org/">Blueprint</a> by <a href="http://twitter.com/#%21/joshuaclayton">Joshua Clayton</a></strong></li>
+</ul>
+<h3>WordPress</h3>
+<h3>Tell us what you think!</h3>
+<p>Go <a href="http://codekickoff.com/">take a look at Code Kick Off</a>! We wanna hear from you, <a href="http://twitter.com/codekickoff">give us a shout</a> on Twitter!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/tools/code-kick-off-kick-off-your-new-web-project/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>jQuery script for scrolling smoothly</title>
+		<link>http://jorgepedret.com/web-development/jquery/jquery-script-for-scrolling-smoothly/</link>
+		<comments>http://jorgepedret.com/web-development/jquery/jquery-script-for-scrolling-smoothly/#comments</comments>
+		<pubDate>Thu, 09 Sep 2010 18:43:50 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[script]]></category>
+		<category><![CDATA[scroll]]></category>
+		<category><![CDATA[snippet]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=178</guid>
+		<description><![CDATA[]]></description>
+			<content:encoded><![CDATA[<pre class="brush: jscript; title: ; notranslate">$('html,body').animate({ scrollTop: $(selector).offset().top }, { duration: 'slow', easing: 'swing'});</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/jquery/jquery-script-for-scrolling-smoothly/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Use jQuery to select child element</title>
+		<link>http://jorgepedret.com/web-development/use-jquery-to-select-child-element/</link>
+		<comments>http://jorgepedret.com/web-development/use-jquery-to-select-child-element/#comments</comments>
+		<pubDate>Fri, 19 Feb 2010 01:12:30 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[reminder]]></category>
+		<category><![CDATA[tricks]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/blog/?p=45</guid>
+		<description><![CDATA[Suppose you have the following structure: This code will let you access the child elements of &#8216;.section&#8217; when you use an &#8216;each&#8217; function I hope this helps someone, I kept forgetting how to do this, so this is mostly a reminder for myself. Source: http://stackoverflow.com/questions/306583/jquery-this-selector-and-children/306904#306904]]></description>
+			<content:encoded><![CDATA[<p>Suppose you have the following structure:</p>
+<pre class="brush: xml; title: ; notranslate">
+&lt;div class=&quot;section&quot;&gt;
+	&lt;h3 class=&quot;title&quot;&gt;Title&lt;/h3&gt;
+	&lt;span class=&quot;description&quot;&gt;...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot;&gt;
+	&lt;h3 class=&quot;title&quot;&gt;Title&lt;/h3&gt;
+	&lt;span class=&quot;description&quot;&gt;...&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+<p>This code will let you access the child elements of &#8216;.section&#8217; when you use an &#8216;each&#8217; function</p>
+<pre class="brush: jscript; title: ; notranslate">
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(function(){
+	$('.section').each(function(i,element){
+		$('description',this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+	});
+});
+&lt;/script&gt;
+</pre>
+<p>I hope this helps someone, I kept forgetting how to do this, so this is mostly a reminder for myself.<br />
+Source: http://stackoverflow.com/questions/306583/jquery-this-selector-and-children/306904#306904</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/use-jquery-to-select-child-element/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>How to fix z-index problem in ie7 with jQuery?</title>
+		<link>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/</link>
+		<comments>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/#comments</comments>
+		<pubDate>Wed, 07 Oct 2009 03:50:47 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[bug]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE7]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[fix]]></category>
+		<category><![CDATA[z-index]]></category>
+
+		<guid isPermaLink="false">http://www.jorgepedret.com/blog/?p=5</guid>
+		<description><![CDATA[A quick post, I was just having problems in my website with my beautiful picture showing on top of everything. It was showing fine in FF but in Internet Explorer 7 it was showing behind, so you could only see like half of my face and that&#8217;s not fare for anyone. I found this cool [...]]]></description>
+			<content:encoded><![CDATA[<p>A quick post, I was just having problems in my website with my beautiful picture showing on top of everything. It was showing fine in FF but in Internet Explorer 7 it was showing behind, so you could only see like half of my face and that&#8217;s not fare for anyone.</p>
+<p>I found this <a class="external" title="Vance Lucas Website" rel="colleage" href="http://www.vancelucas.com/blog/fixing-ie7-z-index-issues-with-jquery/" target="_blank">cool website</a> where I read that ie7 does something weird with the stack order when it renders the page and solves the problem using jQuery. Surprisingly I just copied and pasted the code (after analyzing it of course) and it fixed my problem!</p>
+<p>Here is the code! for more details on this solution go to <a href="http://www.vancelucas.com/blog/fixing-ie7-z-index-issues-with-jquery/" target="_blank">Vance Lucas Website</a></p>
+<pre class="brush: jscript; title: ; notranslate">
+
+$(function() {
+	var zIndexNumber = 1000;
+	$('div').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});
+});
+
+</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

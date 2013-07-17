@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; bug</title>
+	<atom:link href="http://jorgepedret.com/topics/web-development/bug/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>How to fix z-index problem in ie7 with jQuery?</title>
+		<link>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/</link>
+		<comments>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/#comments</comments>
+		<pubDate>Wed, 07 Oct 2009 03:50:47 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[bug]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[IE7]]></category>
+		<category><![CDATA[jQuery]]></category>
+		<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[fix]]></category>
+		<category><![CDATA[z-index]]></category>
+
+		<guid isPermaLink="false">http://www.jorgepedret.com/blog/?p=5</guid>
+		<description><![CDATA[A quick post, I was just having problems in my website with my beautiful picture showing on top of everything. It was showing fine in FF but in Internet Explorer 7 it was showing behind, so you could only see like half of my face and that&#8217;s not fare for anyone. I found this cool [...]]]></description>
+			<content:encoded><![CDATA[<p>A quick post, I was just having problems in my website with my beautiful picture showing on top of everything. It was showing fine in FF but in Internet Explorer 7 it was showing behind, so you could only see like half of my face and that&#8217;s not fare for anyone.</p>
+<p>I found this <a class="external" title="Vance Lucas Website" rel="colleage" href="http://www.vancelucas.com/blog/fixing-ie7-z-index-issues-with-jquery/" target="_blank">cool website</a> where I read that ie7 does something weird with the stack order when it renders the page and solves the problem using jQuery. Surprisingly I just copied and pasted the code (after analyzing it of course) and it fixed my problem!</p>
+<p>Here is the code! for more details on this solution go to <a href="http://www.vancelucas.com/blog/fixing-ie7-z-index-issues-with-jquery/" target="_blank">Vance Lucas Website</a></p>
+<pre class="brush: jscript; title: ; notranslate">
+
+$(function() {
+	var zIndexNumber = 1000;
+	$('div').each(function() {
+		$(this).css('zIndex', zIndexNumber);
+		zIndexNumber -= 10;
+	});
+});
+
+</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/how-to-fix-z-index-problem-in-ie7-with-jquery/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+	</channel>
+</rss>

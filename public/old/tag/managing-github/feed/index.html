@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; managing github</title>
+	<atom:link href="http://jorgepedret.com/tag/managing-github/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Connecting existing git repository with an existing remote github repository</title>
+		<link>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/</link>
+		<comments>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/#comments</comments>
+		<pubDate>Fri, 06 Jul 2012 16:47:35 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[managing github]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[repository]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=715</guid>
+		<description><![CDATA[This often happens to me whenever I start a new project: I start working locally on a brand new project I go to GitHub and create a new repository for my project Confused, start Google-ing how to connect the two of them How do I connect them? Here&#8217;s what you need to do to connect [...]]]></description>
+			<content:encoded><![CDATA[<p>This often happens to me whenever I start a new project:</p>
+<ol>
+<li>I start working locally on a brand new project</li>
+<li>I go to GitHub and create a new repository for my project</li>
+<li>Confused, start Google-ing how to connect the two of them</li>
+</ol>
+<h2>How do I connect them?</h2>
+<p>Here&#8217;s what you need to do to connect your local git repo with your remote github repo:</p>
+<pre class="brush: plain; title: ; notranslate">
+cd /my/local/project/path/
+git init
+git remote add --track master origin git@github.com:jorgepedret/foo.git
+</pre>
+<ol>
+<li>CD into your local project directory</li>
+<li>Run git init, if you haven&#8217;t ran it yet</li>
+<li>Connect the remote repo with your local repo</li>
+</ol>
+<p>Done!</p>
+<p>Now you can commit your changes, pull rebase and then push to your remote repository</p>
+<pre class="brush: plain; title: ; notranslate">
+git add .
+git commit -m &quot;Initial commit&quot;
+git pull --rebase origin master
+git push origin master
+</pre>
+<h2>Another way to do it</h2>
+<p>Here&#8217;s another way to connect your local repo with a remote github repo:</p>
+<ol>
+<li>Rename your local project directory</li>
+<li>Clone your GitHub repo specifying the original directory</li>
+<li>Move the original content to the new repository</li>
+<li>Delete the temporary directory created in line 1</li>
+</ol>
+<pre class="brush: plain; title: ; notranslate">
+mv my_project my_project_temp
+git clone https://github.com/jorgepedret/foo.git my_project
+cp -r ./my_project_temp/. my_project
+rm -r ./my_project_temp
+</pre>
+<h2>What&#8217;s the correct way to do it?</h2>
+<p>The correct way to do it is to start your GitHub repository before starting to code. That way you can simply use git clone and then just start working on it.</p>
+<p>That&#8217;s it! Thanks to <a href="http://caiustheory.com/adding-a-remote-to-existing-git-repo">Caius Theory</a> and <a href="http://ciaranwal.sh/">Ciarán Walsh</a> for helping me find a solution for this problem.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/connecting-existing-git-repository-with-an-existing-remote-github-repository/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

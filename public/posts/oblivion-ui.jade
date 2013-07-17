@@ -1,0 +1,45 @@
+.post
+  h2: a(href="/posts/oblivion-ui") Gorgeous UI from the movie Oblivion
+  p.text-muted June 19th 2013
+
+  p Looking for videos for a talk I&rsquo;m preparing, I stumbled upon this beautiful compilation of scenes from the movie Oblivion showcasing the user interface and how we interact with it.
+
+  p I&rsquo;ll try to make a post in the next couple of weeks analyzing more specific details from this video.
+  
+  if current.path[0] == "index"
+    p: a(href="/posts/oblivion-ui")
+      img(src="/img/oblivion-ui/control-panel-overview.png")
+    p: a(href="/posts/oblivion-ui") Check out the rest of the images &rarr;
+  else
+    .embed-container
+      iframe(width='1280', height='720', src='http://www.youtube.com/embed/j3r4GE1KDtk', frameborder='0', allowfullscreen='allowfullscreen')
+
+    h3 Shots from the video:
+    
+    h4 Control Panel Overview
+    p: a(href="/img/oblivion-ui/control-panel-overview.png")
+      img(src="/img/oblivion-ui/control-panel-overview.png")
+    
+    h4 Control Panel Overview 2
+    p: a(href="/img/oblivion-ui/control-panel-overview-2.png")
+      img(src="/img/oblivion-ui/control-panel-overview-2.png")
+
+    h4 Calculations
+    p: a(href="/img/oblivion-ui/calculations.png")
+      img(src="/img/oblivion-ui/calculations.png")
+    
+    h4 Map Scanning
+    p: a(href="/img/oblivion-ui/map-scanning.png")
+      img(src="/img/oblivion-ui/map-scanning.png")
+
+    h4 Map Analysis
+    p: a(href="/img/oblivion-ui/map-analysis.png")
+      img(src="/img/oblivion-ui/map-analysis.png")
+    
+    h4 Spaceship Nav
+    p: a(href="/img/oblivion-ui/spaceship-nav.png")
+      img(src="/img/oblivion-ui/spaceship-nav.png")
+
+    h4 Terminate
+    p: a(href="/img/oblivion-ui/terminate.png")
+      img(src="/img/oblivion-ui/terminate.png")

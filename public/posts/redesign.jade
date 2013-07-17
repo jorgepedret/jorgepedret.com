@@ -1,0 +1,57 @@
+.post
+  h2: a(href="/posts/redesign") Redesign
+  p.text-muted June 15th, 2013
+
+  p Well, it&rsquo;s been long overdue a re-design for my home in the Internet. My last site was powered by <a href="http://wordpress.org">WordPress</a>, but since then I&rsquo;ve grown a lot as a developer. I&rsquo;ve learned to appreciate the power of simplicity and static assets. Besides, my WordPress site was slow as shit!
+
+  if current.path[0] == "index"
+    p: a(href="/posts/redesign") Continue reading &rarr;
+  else
+    .alert.alert-warning This is not a rant against WordPress, I&rsquo;m just explaining why it&rsquo;s not a good solution for me anymore. There are other solutions out there.
+
+    p As an ex-WordPress developer, I know a lot of people in the community and I&rsquo;m still friend with a bunch of them. We always get into the "to WordPress or not to WordPress" argument. These were my biggest pains when dealing with my WordPress site:
+
+    h3 Getting hacked way too often
+    
+    p My website kept getting hacked over and over again. There was always something up. I hated getting emails from clients and friends telling me <em><strong>Why is your site offereing me Viagra?</strong></em>.
+
+    p Without any warnings, my website would get suspended (that includes my site and ALL of my clients&rsquo; sites) by HostMonster because I was "distributing" malware from my WordPress websites.
+
+    p There are certain security things that you can do about it, but I&rsquo;m not a security expert and I <strong>don&rsquo;t need to be</strong> to run a basic website.
+
+    h3 Painful migration between servers
+
+    p One of the times that HostMonster suspended my account, I got so pissed that I got a Linode account and started moving everything there.
+
+    p Copying the files is the easy part. Managing the database backups and making sure everything connects properly on a different server, that&rsquo;s a pain in the butt.
+
+    h3 Updating is scary
+
+    p No matter how easy WordPress is to update, I always had to backup my files and database before updating. I didn&rsquo;t want to risk spending a whole afternoon figuring out what went wrong.
+
+    p To be fair, I only had a problem with updating WordPress once or twice.
+
+    h3 Fu**ing spams comments
+
+    blockquote
+      p It&rsquo;s actually a great and helpful piece of info. I&rsquo;m happy that you shared this helpful information with us. Please keep us informed like this. Thank you for sharing.
+      small mgcash tutorila
+
+
+    p Sound familiar? I&rsquo;ve been using <a href="http://disqus.com">disqus</a> for my comments and haven&rsquo;t had a problem with it yet.
+
+    h3 Turtle speed
+
+    p WordPress is know for its slowness. You have to install a bunch of shit to make it go faster and even then it was slow.
+
+    p All I needed was a simple site with a home page to list my articles and a contact form. And this is what 99% of the WordPress sites out there are. There&rsquo;s a lot of overhead for this simple requirement.
+
+    h3 Versioning is nearly impossible
+
+    p Putting your files in Github isn&rsquo;t enough, as you&rsquo;ll always depend on the data that&rsquo;s in your database. This is a big turn off for me.
+
+    p I guess you could do a dump of your DB, but would you really do that every time you make a change in your files and in your data?
+
+    //- h2 Fuck you, WordPress!
+
+    //- p <strong>Just kidding.</strong> WordPress was a great tool for me for years, but it was time to move on and think of better ways for doing things.

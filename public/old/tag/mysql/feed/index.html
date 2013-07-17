@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; MySQL</title>
+	<atom:link href="http://jorgepedret.com/tag/mysql/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Cloning a remote WordPress site in your local computer</title>
+		<link>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/</link>
+		<comments>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/#comments</comments>
+		<pubDate>Wed, 16 May 2012 21:30:24 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[how-to]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[tricks]]></category>
+		<category><![CDATA[Wordpress]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=702</guid>
+		<description><![CDATA[This is a trick that I usually use when I need to clone an existing WordPress installation in my local computer.]]></description>
+			<content:encoded><![CDATA[<p>This is a trick that I usually use when I need to clone an existing WordPress installation in my local computer.</p>
+<ol>
+<li>Clone all the remote WordPress files in your local computer.</li>
+<li>Clone the remote WordPress database into your local computer.</li>
+<li>Update the wp-config.php file with your local MySQL access info and database name.</li>
+<li>Replace the old domain with the new domain in your local MySQL by running this commands:</li>
+</ol>
+<pre class="brush: sql; title: ; notranslate">
+UPDATE wp_options SET option_value = REPLACE(option_value, 'http://old.domain.com', 'http://new.domain.com');
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://old.domain.com', 'http://new.domain.com');
+</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/cloning-a-remote-wordpress-site-in-your-local-computer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

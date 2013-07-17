@@ -1,0 +1,23 @@
+!!!5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    title Jorge Pedret | Vancouver Front-end Engineer
+    meta(name="description", content="Jorge Pedret | Vancouver Front-end Engineer")
+    link(rel="stylesheet", href="/css/main.css")
+  body(class="page-#{ current.path[0] }")
+    .container
+      != partial("_partials/intro")
+      .content#content
+        != yield
+        if current.path[0] == "posts"
+          #disqus_thread
+          script
+            var disqus_shortname = 'jorgepedret';
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      != partial("_partials/footer")

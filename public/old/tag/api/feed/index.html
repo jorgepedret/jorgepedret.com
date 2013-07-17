@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; api</title>
+	<atom:link href="http://jorgepedret.com/tag/api/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Loading Google Maps API on demand</title>
+		<link>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/</link>
+		<comments>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/#comments</comments>
+		<pubDate>Fri, 20 Apr 2012 23:17:13 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[google maps]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[js]]></category>
+		<category><![CDATA[lazy loading]]></category>
+		<category><![CDATA[on demand]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=686</guid>
+		<description><![CDATA[Here's another quick snipped that I used recently to load Google Maps on demand.]]></description>
+			<content:encoded><![CDATA[<p>Here&#8217;s another quick snipped that I used recently to load Google Maps on demand.</p>
+<pre class="brush: jscript; title: ; notranslate">
+function loadGoogleMapsApi(){
+	if(typeof google === &quot;undefined&quot;){
+		var script = document.createElement(&quot;script&quot;);
+		script.src = &quot;https://maps.google.com/maps/api/js?sensor=false&amp;callback=loadGoogleMapsApiReady&quot;;
+		document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+	} else {
+		loadGoogleMapsApiReady();
+	}
+}
+function loadGoogleMapsApiReady(){
+	$(&quot;body&quot;).trigger(&quot;gmap_loaded&quot;);
+}
+</pre>
+<p>First we define the <code>loadGoogleMapsApi</code> function, where we include the script tag which is going to start loading Google Maps&#8217; API. Notice in line 4 how we define the callback function <code>loadGoogleMapsApiReady</code>. This is the function that will be executed after the library has been loaded.</p>
+<p>The second step is defining the callback function <code>loadGoogleMapsApiReady</code>. This function simply triggers the custom even <code>gmap_loaded</code> on the body.</p>
+<p>You&#8217;re all set now! Now is time to use the on demand functionality. For that you only need to attach some functionality to the custom event <code>gmap_loaded</code> triggered on the body tag. See below:</p>
+<pre class="brush: jscript; title: ; notranslate">
+$(&quot;body&quot;).bind(&quot;gmap_loaded&quot;, function(){
+	alert(&quot;Google map is loaded and ready to be used!&quot;);
+});
+loadGoogleMapsApi();
+</pre>
+<p>If you want to load the Google Maps API on a button click, you could do something like this:</p>
+<pre class="brush: jscript; title: ; notranslate">
+$(&quot;.my-btn&quot;).click(function(){
+	$(&quot;body&quot;).bind(&quot;gmap_loaded&quot;, function(){
+		alert(&quot;Google map is loaded and ready to be used!&quot;);
+	});
+	loadGoogleMapsApi();
+});
+</pre>
+<p>Let me know what you think and how it worked for you.</p>
+<p>Here&#8217;s a link to the snippet on the gist: <a href="https://gist.github.com/2432506">https://gist.github.com/2432506</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/loading-google-maps-api-on-demand/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

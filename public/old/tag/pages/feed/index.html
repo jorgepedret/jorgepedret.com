@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Jorge Pedret &#187; pages</title>
+	<atom:link href="http://jorgepedret.com/tag/pages/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jorgepedret.com</link>
+	<description>Freelance Web Developer + Front End Designer</description>
+	<lastBuildDate>Fri, 24 Aug 2012 16:34:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4.1</generator>
+		<item>
+		<title>Get pages by template name in WordPress</title>
+		<link>http://jorgepedret.com/web-development/get-pages-by-template-name-in-wordpress/</link>
+		<comments>http://jorgepedret.com/web-development/get-pages-by-template-name-in-wordpress/#comments</comments>
+		<pubDate>Tue, 21 Jun 2011 21:01:37 +0000</pubDate>
+		<dc:creator>Jorge Pedret</dc:creator>
+				<category><![CDATA[Web Development]]></category>
+		<category><![CDATA[how-to]]></category>
+		<category><![CDATA[pages]]></category>
+		<category><![CDATA[template name]]></category>
+		<category><![CDATA[tricks]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<category><![CDATA[wp]]></category>
+
+		<guid isPermaLink="false">http://jorgepedret.com/?p=535</guid>
+		<description><![CDATA[Quick post to show how to retrieve pages by certain custom template. Example of use List all the published pages that use the template &#8220;page-quote.php&#8221;: How does it work? The template assigned to the page is stored as a meta data by the key &#8216;_wp_page_template&#8217;. Using the get_pages() WordPress function, we can ask for the [...]]]></description>
+			<content:encoded><![CDATA[<p>Quick post to show how to retrieve pages by certain custom template. </p>
+<pre class="brush: php; title: ; notranslate">
+$pages = get_pages(array(
+	'meta_key' =&gt; '_wp_page_template',
+	'meta_value' =&gt; '&lt;Insert your template file name here&gt;'
+));
+</pre>
+<h2>Example of use</h2>
+<p>List all the published pages that use the template &#8220;page-quote.php&#8221;:</p>
+<pre class="brush: php; title: ; notranslate">
+$pages = get_pages(array(
+	'meta_key' =&gt; '_wp_page_template',
+	'meta_value' =&gt; 'page-quote.php'
+));
+foreach($pages as $page){
+	echo $page-&gt;post_title.'&lt;br /&gt;';
+}
+</pre>
+<h2>How does it work?</h2>
+<p>The template assigned to the page is stored as a meta data by the key &#8216;_wp_page_template&#8217;. Using the get_pages() WordPress function, we can ask for the page where &#8216;_wp_page_template&#8217; equals our template name.</p>
+<h2>More Info</h2>
+<p><a href="http://codex.wordpress.org/Function_Reference/get_pages">get_pages() documentation</a></p>
+<p>Hope this helps, post a comment if you have any questions.</p>
+<h2>Update</h2>
+<p>Some people have been having problems with some pages not showing in the results. Thanks to <a href="#comment-34687">Alyssa</a> we have a solution for this problem. I&#8217;m posting it here for quick access:</p>
+<p>The pages weren&#8217;t showing because they had another page as their parent. Alyssa solved this by adding <code>‘hierarchical’ => 0</code> to the query.</p>
+<p>So the final code would be:</p>
+<pre class="brush: php; title: ; notranslate">
+$pages = get_pages(array(
+    ‘meta_key’ =&gt; ‘_wp_page_template’,
+    ‘meta_value’ =&gt; ‘page-quote.php’,
+    ‘hierarchical’ =&gt; 0
+));
+foreach($pages as $page){
+    echo $page-&gt;post_title;
+}
+</pre>
+]]></content:encoded>
+			<wfw:commentRss>http://jorgepedret.com/web-development/get-pages-by-template-name-in-wordpress/feed/</wfw:commentRss>
+		<slash:comments>19</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,400 @@
+.post
+  h2: a(href="/posts/analyzing-publishing-widgets") Analyzing Publishing Widgets
+  p.text-muted June 16th 2013
+
+  p.lead Publishing widgets can make or break the success of your app. In most cases they constitute a big chunk of the user experience. It&rsquo;s fair that we pay attention at how we&rsquo;re building them.
+
+  if current.path[0] == "index"
+    p: a(href="/posts/analyzing-publishing-widgets") Continue reading &rarr;
+  else
+    p The purpose of this article is to identify the details that make a good experience when publishing content. Making it easy for people to post content to your website is one of the hardest thing to do and these widgets that I&rsquo;ll show you are doing something right.
+
+    p In this article we&rsquo;ll take a look at the publishing forms for the most popular applications out there: Facebook, Google Plus, Twitter, Quora and LinkedIn. Let&rsquo;s get started&hellip;
+
+    h2 Index
+    ul
+      li: a(href="#facebook") Facebook
+      li: a(href="#plus") Google Plus
+      li: a(href="#twitter") Twitter
+      li: a(href="#quora") Quora
+      li: a(href="#linkedin") LinkedIn
+      li: a(href="#comparison") Comparison Tables
+
+    h2 Quick Links
+    ul
+      li: a(href="/posts/facebook-publishing-widget") Facebook Screenshots
+      li: a(href="/posts/gplus-publishing-widget") G+ Screenshots
+      li: a(href="/posts/twitter-publishing-widget") Twitter Screenshots
+      li: a(href="/posts/quora-publishing-widget") Quora Screenshots
+      li: a(href="/posts/linkedin-publishing-widget") LinkedIn Screenshots
+
+    h3#facebook Facebook
+
+    p: strong Default state
+    p: a(href="/img/publishing-forms/facebook/default-state.jpg")
+        img.img-thumbnail(src="/img/publishing-forms/facebook/default-state.jpg")
+    p Facebook has a text input asking you: <strong>"What&rsquo;s on your mind?"</strong>. A bit too small in my opinion, but it works really well for them.
+
+    p Clicking on the text input changes the widget to its active state, which reveals the full set of features.
+    
+    p: strong Active state
+    p: a(href="/img/publishing-forms/facebook/active-state.jpg")
+        img.img-thumbnail(src="/img/publishing-forms/facebook/active-state.jpg")
+    p Although it looks very simple, this is one of the most powerful widgets I evaluated, striking a good balance between feature set and simplicity.
+
+    p The invite phrase remains the same as opposed to Twitter&rsquo;s widget. There&rsquo;s no way to cancel the active state, once it&rsquo;s active it stays active until you refresh or submit the form.
+
+    p To submit the form, they have a small blue simple button with the text <em>Post</em>.
+    
+    p: strong Features
+    ul
+      li Tags
+      li Mentions
+      li Adding people that you&rsquo;re with
+      li Add location where you were at
+      li Add media (video/image)
+      li Add mood
+      li Selective Sharing
+    
+    p: strong Media Attachments
+    p: a(href="/img/publishing-forms/facebook/media.gif")
+      img.img-thumbnail(src="/img/publishing-forms/facebook/media.gif")
+    
+    p Really nice experience for attaching files. You can simply select one or multiple files from your computer and they&rsquo;ll show in the post box. After you attach the first set of files, you can see a box right next to it to easily add more.
+
+    p The progress indicator is really nice. It has two stages uploading and processing. After it&rsquo;s finished uploading, you can see a dimmed down preview of the image you uploaded. Once it&rsquo;s finished processing it, the image becomes opaque and you know it&rsquo;s ready to be published.
+    
+    p: strong Mentions support
+    p: a(href="/img/publishing-forms/facebook/mention.gif")
+      img.img-thumbnail(src="/img/publishing-forms/facebook/mention.gif")
+    
+    p Don&rsquo;t you love to mention your friends using their full name? &mdash; <em>Hey, Kenneth Ormandy, how&rsquo;s life?</em> &mdash; me either. Facebook fixed this issue by allowing you to remove part of the name of the person that you&rsquo;re mentioning.
+
+    p Typing <code>@</code> allows you to create a link your friend&rsquo;s page from your post. As soon as you type <code>@ + any character</code>, a list of matching friends gets shown at the bottom of the post widget.
+
+    p You can go through the results by using your up/down arrow keys. You can also hide the list by pressing the scape key.
+    
+    p: strong Tags support
+    
+    p: a(href="/img/publishing-forms/facebook/tags.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/facebook/tags.jpg")
+    
+    p Facebook has a very basic support for tags. You can create a tag by typing <code>#</code> in front of the word that you want to tag. No tag suggestions are shown when you start typing, which kinda sucks.
+
+    p Another thing that I noticed for all other widgets is that none of them support multiple word tags, so you end up with multiple words bunched up together like <code>#VancouverIsAwesome</code>. To be fair, it&rsquo;s hard to device a simple solution to support that case.
+
+    hr
+
+    h3#plus Google Plus
+
+    p: strong Default state
+
+    p: a(href="/img/publishing-forms/gplus/default-state.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/gplus/default-state.jpg")
+
+    p Google+&rsquo;s widget is so far the best looking one. When you click on the textarea to create a new post, it animates nicely to the middle of the screen, pushing the rest of the content down. The animation was janky at times, which made the experience a bit crappier.
+
+    p Their call to action in the input box is: <strong>Share what&rsquo;s new&hellip;</strong>. They also provide you buttons to quickly post photos, links, videos and events.
+
+    p I really like the default size of this widget, very prominent, inviting people to post something.
+    
+    p: strong Active state
+    p: a(href="/img/publishing-forms/gplus/active.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/gplus/active.jpg")
+
+    p Really good looking widget, makes you want to post something. The <strong>"Share"</strong> submit button is disabled when the form is empty, and it goes active as soon as you type something.
+
+    p You can make the form go to its default state by clicking on the "Cancel" button. Which animates it back to where it was at the beginning.
+
+    p One thing to notice is that by default, you&rsquo;re not sharing the post with anyone. You have to conciously add people to the post to share it with them.
+    
+    p: strong Features
+    ul
+      li Tags
+      li Mentions
+      li Add Photos
+      li Add Link
+      li Add Video
+      li Add Event
+      li Selective Sharing
+    
+    p: strong Media Attachments
+    p: a(href="/img/publishing-forms/gplus/media.gif")
+      img.img-thumbnail(src="/img/publishing-forms/gplus/media.gif")
+    
+    p The media uploader works really nice when you&rsquo;re uploading one image. When you&rsquo;re uploading more than one image, you&rsquo;re forced to create an album, which is kinda awkward.
+
+    p The uploader is really fast. It shows a dimmed down preview of the image you&rsquo;re uploading with a blue progress bar in the center. After the upload and processing is finished, the image goes full opaque and the progress bar fades out.
+
+    p: strong Mentions support
+    p: a(href="/img/publishing-forms/gplus/mention.gif")
+      img.img-thumbnail(src="/img/publishing-forms/gplus/mention.gif")
+    
+    p Unfortunatelly, G+ widget doesn&rsquo;t support partial names, so we end up with the awkward full names &mdash; <em>Hey <strong>Rob Ellis</strong>, how is it going?</em>.
+
+    p Notice how the person that you&rsquo;re mentioning gets automaticall added to the <em>share with</em> list.
+
+    p: strong Tags support
+    p: a(href="/img/publishing-forms/gplus/tags.gif")
+      img.img-thumbnail(src="/img/publishing-forms/gplus/tags.gif")
+    
+    p As expected, by typing a <code>#</code> you get a list of suggested tags. You&rsquo;re not forced to pick from the suggested list, you can create your own tag.
+
+    p It doesn&rsquo;t support multi-word tags.
+
+    hr
+
+    h3#twitter Twitter
+
+    p: strong Default state
+    p: a(href="/img/publishing-forms/twitter/default.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/twitter/default.jpg")
+
+    p Super tiny compared to all the other widgets, really easy to miss if you&rsquo;re new to the service. It&rsquo;s also not visually appealing at all.
+
+    p The widget invites you to create a new tweet with: "Compose a new Tweet&hellip;" When you click on the input box, it gets expanded to its active state.
+
+    p: strong Active state
+    p: a(href="/img/publishing-forms/twitter/active.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/twitter/active.jpg")
+
+    p Clicking outside of the text input will change the widget back to its default state. Same thing when you switch windows or tabs, it goes back to <em>default</em>, which can be annoying sometimes.
+
+    p In active state, the call to action "Compose a new Tweet&hellip;" is completely gone.
+    
+    p: strong Features
+    ul
+      li Tags
+      li Mentions
+      li Add Photos
+      li Automatic link shrinking
+      li Add Location
+    
+    p: strong Media Attachments
+    p: a(href="/img/publishing-forms/twitter/media.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/twitter/media.jpg")
+    
+    p Very basic image uploader. It opens a file dialog where you can choose one image from your computer. It doesn&rsquo;t support multiple images.
+
+    p There&rsquo;s no progress bar, but the image usually loads really really fast, showing you a preview of the image you uploaded right below the text input area.
+
+    p: strong Mentions support
+    p: a(href="/img/publishing-forms/twitter/mention.gif")
+      img.img-thumbnail(src="/img/publishing-forms/twitter/mention.gif")
+    
+    p Works really nice most of the time. A really cool feature is that you can find a user handle by its handle or by the person&rsquo;s name. I.e.: If I type Joe, it&rsquo;ll show me Twitter handles of people named Joe.
+
+    p: strong Tags support
+    p: a(href="/img/publishing-forms/twitter/tags.gif")
+      img.img-thumbnail(src="/img/publishing-forms/twitter/tags.gif")
+    
+    p As expected, by typing a <code>#</code> you get a list of suggested tags. You&rsquo;re not forced to pick from the suggested list, you can create your own tag.
+
+    p Suggested tags are usually contextual to your location and previous tags, which works great when you&rsquo;re tweeting about an event with a complicated hashtag. It also saves a lot of time when posting from your phone.
+
+    p Same as all the other widgets, it doesn&rsquo;t support multi-word tags.
+
+    hr
+
+    h3#quora Quora
+
+    p: strong Default state
+    p: a(href="/img/publishing-forms/quora/default.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/quora/default.jpg")
+
+    p Super tiny compared to all the other widgets, really easy to miss if you&rsquo;re new to the service. Not visually appealing and it&rsquo;s located on the far right which has low real estate value.
+
+    p The reason behind this decision might be to encourage people to search first before posting a question. But the post form itself works as a search form &mdash;as you&rsquo;ll see below&mdash; so I don&rsquo;t really understand why they do this.
+
+    p The widget&rsquo;s call to action is <strong>"Type Question Here"</strong>, a bit unhuman for my likes. When you click on the input box it expands to show its active state.
+
+    p: strong Active state
+    p: a(href="/img/publishing-forms/quora/active.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/quora/active.jpg")
+
+    p As soon as it goes in active state, it shows two new fields: Topic and More Details. I like how they focus on the question&rsquo;s text area, making it the main thing. But the mandatory Topic field is above the question field, which gives the question a context.
+
+    p When you start typing in the question field, Quora tries to find a question that matches what you&rsquo;re typing to avoid duplicate questions.
+
+    p Unfortunately, Quora&rsquo;s widget is not very accessible. While you&rsquo;re in the form fields, the tab key takes you to very unexpected places in the document.
+
+    p Their button call to action is: <strong>"Add Question"</strong>.
+    
+    p: strong Features
+    ul
+      li Search matching your text
+      li Add question anonymously
+      li One topic per question
+    
+    p: strong Topic support
+    p: a(href="/img/publishing-forms/quora/topic.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/quora/topic.jpg")
+    
+    p When you start typing a topic, the widget shows you matching ones. It shows you the name, the image (if available) and the number of followers. Enough information to make a decission of where you want your question to go to.
+
+    h3#linkedin LinkedIn
+
+    p: strong Default and active state
+    p: a(href="/img/publishing-forms/linkedin/default.jpg")
+      img.img-thumbnail(src="/img/publishing-forms/linkedin/default.jpg")
+
+    p Great location and size. Also very simple, not intimidating at all in terms of complexity. The call to action in the text box is: <strong>"Type a name or @ to mention someone..."</strong>, and the button simply says <strong>"Share"</strong>.
+
+    p This is the only widget that doesn't have an active state, it doesn't change at all when you click on the input box. They could make it look even simpler by hiding the "Share with" options hidden by default and only showing them in their active state (if they had one).
+    
+    p: strong Features
+    ul
+      li Mentions
+      li Add Photos
+    
+    p: strong Media Attachments
+    p: a(href="/img/publishing-forms/linkedin/media.gif")
+      img.img-thumbnail(src="/img/publishing-forms/linkedin/media.gif")
+    
+    p Some nice details in the photo uploader. Really like the clip on the top right after uploading your image. The upload progress state looks really good as well, very clear and it even shows the percentage.
+
+    p Notice how the verbiage in the text input changes when you upload a photo. It goes from "Type a name or @ to mention someone..." to <strong>"Say something about this image..."</strong>.
+
+    p: strong Mentions support
+    p: a(href="/img/publishing-forms/linkedin/mention.gif")
+      img.img-thumbnail(src="/img/publishing-forms/linkedin/mention.gif")
+    
+    p Like Facebook, it supports partial names, which is a great feature!
+
+    hr
+
+    h3#comparison Comparison Tables
+    
+    table.table.table-striped.table-bordered
+      caption Call to Action
+      tbody
+        tr
+          th Facebook
+          td What's on your mind?
+        tr
+          th G+
+          td Share what's new...
+        tr
+          th Twitter
+          td Compose new Tweet...
+        tr
+          th Quora
+          td Type Question Here
+        tr
+          th LinkedIn
+          td Type a name or @ to mention someone...
+
+    table.table.table-striped.table-bordered
+      caption Submit button
+      tbody
+        tr
+          th Facebook
+          td Post (gray-ish blue)
+        tr
+          th G+
+          td Share (bright green)
+        tr
+          th Twitter
+          td Tweet (light blue)
+        tr
+          th Quora
+          td Add Question (dark blue)
+        tr
+          th LinkedIn
+          td Share (dark blue)
+
+    table.table.table-striped.table-bordered
+      caption Tagging
+      tbody
+        tr
+          th Facebook
+          td Yes
+        tr
+          th G+
+          td Yes (hinted)
+        tr
+          th Twitter
+          td Yes (hinted)
+        tr
+          th Quora
+          td No
+        tr
+          th LinkedIn
+          td No
+
+    table.table.table-striped.table-bordered
+      caption Mentions
+      tbody
+        tr
+          th Facebook
+          td Yes + partial names
+        tr
+          th G+
+          td Yes
+        tr
+          th Twitter
+          td Yes
+        tr
+          th Quora
+          td No
+        tr
+          th LinkedIn
+          td Yes + partial names
+
+    table.table.table-striped.table-bordered
+      caption Selective Sharing
+      tbody
+        tr
+          th Facebook
+          td Yes
+        tr
+          th G+
+          td Yes
+        tr
+          th Twitter
+          td No
+        tr
+          th Quora
+          td No
+        tr
+          th LinkedIn
+          td Yes
+
+    table.table.table-striped.table-bordered
+      caption Automatic Search on Type
+      tbody
+        tr
+          th Facebook
+          td Mentions
+        tr
+          th G+
+          td Mentions + Tags
+        tr
+          th Twitter
+          td Mentions + Tags
+        tr
+          th Quora
+          td Question + Topic
+        tr
+          th LinkedIn
+          td Mentions
+
+    table.table.table-striped.table-bordered
+      caption Media Attachments
+      tbody
+        tr
+          th Facebook
+          td Multiple files
+        tr
+          th G+
+          td Multiple files
+        tr
+          th Twitter
+          td One photo
+        tr
+          th Quora
+          td None
+        tr
+          th LinkedIn
+          td One photo
+    hr

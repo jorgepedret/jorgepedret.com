@@ -1,0 +1,23 @@
+.post
+  h2: a(href="/posts/cloning-website") Cloning an existing website
+  p.text-muted June 15th 2013
+
+  p.lead How to clone a whole website to your local computer with one command
+
+  pre: code
+    | $ wget \
+    |     --recursive \
+    |     --no-clobber \
+    |     --page-requisites \
+    |     --html-extension \
+    |     --convert-links \
+    |     --restrict-file-names=windows \
+    |     --domains jorgepedret.com \
+    |     --no-parent \
+    |         jorgepedret.com
+
+  p I used this technique for migrating creating a working copy of my old site without needing to keep an instance of WordPress running the whole time.
+
+  p The only reason I wanted to keep a copy of my old site running is because I have a lot of posts there that me and other people use for reference and I don&rsqo;t want to just throw that away.
+
+  p Source: <a href="http://www.linuxjournal.com/content/downloading-entire-web-site-wget">http://www.linuxjournal.com/content/downloading-entire-web-site-wget</a>

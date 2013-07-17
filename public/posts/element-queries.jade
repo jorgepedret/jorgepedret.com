@@ -1,0 +1,74 @@
+.post
+  h2: a(href="/posts/element-queries") CSS Element Queries
+  p.text-muted July 5th 2013
+
+  p.lead CSS media queries are useful for creating responsive page layouts. But media queries will always depend on the device dimensions killing any oportunity to create modular components.
+
+  if current.path[0] == "index"
+    p In our journey towards web components and modularity, <strong>element queries</strong> will open the doors for components that contain their own styling logic and mutate depending on their direct environment.
+    
+    p: a(href="/posts/element-queries") Continue reading &rarr;
+  if current.path[0] == "posts"
+
+    p: strong What do you mean with modular components?
+
+    p <em>Modular components</em> refer to components that can be reused in different parts of our app and even in completely different apps. They should be visually and functionally independent.
+
+    p The W3C group is currently working on a spec called <a href="http://www.w3.org/TR/2013/WD-components-intro-20130606/">Web components</a>, a huge step for the web. It allows Web application authors to define widgets with a level of visual richness and interactivity not possible with CSS alone, and <strong>ease of composition</strong> and <strong>reuse</strong> not possible with script libraries today.
+
+    p This spec will allow us to create modular components that can be easily added or removed from your applications. Yet, it doesn't give us the capability to create components that change their looks depending on their size.
+
+    p: strong What's wrong with Media Queries?
+
+    p I like learning from examples. Let&rsquo;s say we had a <code>quote</code> component. By default it&rsquo;ll have <code>font-size: 1em</code>:
+
+    script(src="https://gist.github.com/jorgepedret/f18db70eecde711e613f.js?file=quote.css")
+
+    p But we want <em>responsive typography</em> for our component so it reads nice no matter where it is. We want the <code>font-size</code> to be <code>1.5em</code> when <code>.quote</code>&rsquo;s width is greater than <code>300px</code>.
+
+    p The way we would do that now, would look something like this:
+
+    script(src="https://gist.github.com/jorgepedret/f18db70eecde711e613f.js?file=bad.css")
+
+    p: strong Why is this bad? &mdash; you ask
+    
+    p This is a bad idea because:
+
+    ol
+      li You&rsquo;re assuming that the component expands the whole device width, and 
+      li Your coupling your device with the component.
+
+    p Starting to see the problem now?
+
+    p What happens if you want your component to take only &frac12; of the screen width? On a 512px width device, your component will be 256px wide, but it&rsquo;ll show the wrong styles (<code>font-size: 1.5em</code>). This is not the behaviour we want.
+
+    p We want be able to do something like this:
+
+    script(src="https://gist.github.com/jorgepedret/f18db70eecde711e613f.js?file=quote2.css")
+
+    p This reads &mdash; whenever <code>.quote</code> is at least <code>300px</code> wide, make its <code>font-size: 1.5em</code>. &mdash; This does not depend on the device width, it purely depends on the space it has available.
+
+    p A modular component should not only be able to change its functionality depending on its size, but it should also be able to change its own styling depending on its size.
+
+    p In our journey towards web components and modularity, <strong>element queries</strong> will open the doors for components that contain their own styling logic and mutate depending on their direct environment.
+
+    p Most people agree that element queries is the right direction to go, although, implementation is not as easy as it sounds. There are some obvious flaws, like <a href="http://www.xanthir.com/b4PR0">Circularity</a>, that need to be figured out first before moving forward.
+
+    p Your mission now is making element queries a reality by playing with it, starting to think in terms of components instead of devices and by getting involved in the conversation.
+
+    p Get started by reading the related articles and taking a look at the current workarounds (below).
+
+    h3 Related articles
+
+    ul
+      li: a(href='http://ianstormtaylor.com/media-queries-are-a-hack/') Media Queries are a hack
+      li: a(href='http://filamentgroup.com/lab/element_query_workarounds/') Working around a lack of element queries
+      li: a(href='http://coding.smashingmagazine.com/2013/06/25/media-queries-are-not-the-answer-element-query-polyfill/') Media Queries Are Not The Answer: Element Query Polyfill
+      li: a(href='http://www.xanthir.com/b4PR0') Element Queries
+    
+    h3 Current Workarounds
+    
+    ul
+      li: a(href='https://github.com/marcj/css-element-queries') CSS Element Queries
+      li: a(href='https://github.com/filamentgroup/scoped-media-query') Scoped Media Query
+      li: a(href='https://github.com/jorgepedret/css-element-query-experiments') Element Queries Experiments

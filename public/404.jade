@@ -1,0 +1,6 @@
+h1 404
+
+script
+  if (!window.location.pathname.match(/^(\/old)/)) {
+    window.location.href = '/old' + window.location.pathname;
+  }
