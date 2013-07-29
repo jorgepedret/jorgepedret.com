@@ -1,0 +1,23 @@
+.container {
+  -webkit-flex-flow: row wrap;
+  display: -webkit-flex;
+  margin-bottom: 50px;
+}
+.item {
+  background: #CCC;
+  height: 200px;
+  -webkit-flex: 1;
+  transition: all .2s ease;
+  text-align: center;
+  &:hover {
+    -webkit-flex: 2;
+    background: #999;
+  }
+}
+
+.input {
+  -webkit-flex: 1 1 auto;
+}
+.button {
+  -webkit-flex: 0 0 auto;
+}

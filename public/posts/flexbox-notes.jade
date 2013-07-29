@@ -1,0 +1,105 @@
+.post
+  h2: a(href="/posts/flexbox-notes") Flexbox notes
+  p.text-muted July 26th 2013
+
+  p.lead Some personal notes and demos on CSS Flexbox
+
+  if current.path[0] == "index"
+    p: a(href="/posts/flexbox-notes") Enter at your own risk &rarr;
+  else
+
+    p Notes I wrote down while watching <a href="http://vimeo.com/69531447">Stephen Hay&rsquo;s talk on Flexbox</a> at CSS Day.
+
+    style
+      .flexbox-container {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        margin-bottom: 5px;
+      }
+      .flexbox-item {
+        background: #ddd;
+        -webkit-flex: auto;
+        -moz-flex: auto;
+        -ms-flex: auto;
+        -o-flex: auto;
+        flex: auto;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px;
+      }
+    
+    .example
+      span.text-muted Example 1:
+      .flexbox-container
+        .flexbox-item 1
+        .flexbox-item 2
+        .flexbox-item 3
+      span.text-muted Example 2:
+      .flexbox-container
+        .flexbox-item 1
+        .flexbox-item 2
+        .flexbox-item 3
+        .flexbox-item 4
+
+    p Example 1 and 2 use the exact same CSS. Notice how the items in the list automatically <em>flex</em> themselves to use the available space. No need to define floats widths in <code>%</code> or <code>px</code>, <code>flexbox</code> figures out the width.
+
+    h2 Make container a flexbox
+
+    pre: code display: flex;
+
+    h2 Container Properties
+
+    p <code>flex-direction</code> dictates the direction that the items are going to flow. Left to right, right to left, top to bottom, bottom to top.
+
+    pre: code flex-direction: row | row-reverse | column | column-reverse;
+
+    p <code>flex-wrap</code> dictates what happens when the items inside the container overflow.
+
+    pre: code flex-wrap: wrap | nowrap | wrap-reverse;
+
+    p <code>flex-flow</code> is a shortcut for specifying <code>flex-direction</code> and <code>flex-wrap</code>
+
+    pre: code flex-flow: row wrap;
+
+    h2 Item properties
+    
+    p <code>flex</code> shorthand for <code>flex-grow</code>, <code>flex-shrinkg</code> and <code>flex-basis</code>.
+
+    pre: code flex: 0 0 auto;
+    
+    p <code>flex-grow</code> dictates if the box is allowed to grow more than its specified width
+
+    pre: code flex-grow: number;
+
+    p <code>flex-shrinkg</code> defines if the box is allowed to shrink passed its defined width
+
+    pre: code flex-shrinkg: number;
+
+    p <code>flex-basis</code> defines the initial width of the element.
+
+    pre: code flex-basis: percentage | absolute length | initial | auto;
+    
+    pre: code
+      | flex: initial; // shorthand for 'flex: 0 1 auto';
+      
+      | flex: auto; // shorthand for 'flex: 1 1 auto';
+      
+      | flex: none; // shorthand for 'flex: 0 0 auto';
+
+    h2 Quick example
+
+    p Dristribute all the <code>.item</code> elements equaly in the space available in <code>.container</code>:
+
+    pre: code
+      | .container {
+      |   -webkit-flex-flow: row wrap;
+      |   display: -webkit-flex;
+      | }
+      | .item {
+      |   -webkit-flex: 1;
+      | }
+
+    p: a.btn.btn-danger(href="/demo/flexbox-notes/") Demo &amp; Playground &rarr;
